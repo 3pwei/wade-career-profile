@@ -1,0 +1,50 @@
+identity:
+  full_name: Wade Huang
+  professional_name: Wade Huang
+  headline:
+    zh-TW: Python 工程師｜Backend、Data 與 Cloud Platform
+    en: Python Engineer | Backend, Data, and Cloud Platforms
+  location:
+    zh-TW: 台灣
+    en: Taiwan
+  website: https://milespapa.com
+  github: https://github.com/3pwei
+  linkedin: null
+  private_contact: null
+
+summaries:
+  - id: general
+    text:
+      zh-TW: 專注於 Python、資料與雲端工程的軟體工程師，重視可維護性、自動化、資料正確性與可靠交付。
+      en: Software engineer focused on Python, data, and cloud engineering, with an emphasis on maintainability, automation, data correctness, and reliable delivery.
+    verification_status: user_provided
+    evidence_url: null
+    last_reviewed: null
+  - id: backend
+    text:
+      zh-TW: 以 Python 建構可維護的 Backend 與自動化系統，關注 API 設計、資料整合、測試與 CI/CD。
+      en: Python engineer building maintainable backend and automation systems, with a focus on API design, data integration, testing, and CI/CD.
+    verification_status: user_provided
+    evidence_url: null
+    last_reviewed: null
+  - id: data-engineering
+    text:
+      zh-TW: 聚焦資料管線、Spark／Delta Lake 與分析資料產品，重視可追溯性、品質檢查及可重現流程。
+      en: Data engineer focused on data pipelines, Spark and Delta Lake, with an emphasis on traceability, quality checks, and reproducible workflows.
+    verification_status: user_provided
+    evidence_url: null
+    last_reviewed: null
+  - id: cloud-platform
+    text:
+      zh-TW: 橫跨 Cloud、CI/CD 與 Platform Engineering，將可觀測性、安全 gate 與維運需求納入交付流程。
+      en: Cloud and platform engineer incorporating observability, security gates, and operational requirements into delivery workflows.
+    verification_status: user_provided
+    evidence_url: null
+    last_reviewed: null
+  - id: data-analytics
+    text:
+      zh-TW: 結合資料分析、工程與研究方法，將原始資料整理為可驗證、可溝通的分析結果。
+      en: Data professional combining analytics, engineering, and research methods to turn raw data into verifiable and communicable findings.
+    verification_status: user_provided
+    evidence_url: null
+    last_reviewed: null

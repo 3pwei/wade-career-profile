@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="{{ lang }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ resume.identity.professional_name }} — {{ resume.headline }}</title>
+  <style>{{ css }}</style>
+</head>
+<body>
+  <main class="resume">
+    <header class="identity">
+      <h1>{{ resume.identity.professional_name }}</h1>
+      <p class="headline">{{ resume.headline }}</p>
+      <p class="contact">
+        <span>{{ localize(resume.identity.location) }}</span>
+        {% if resume.identity.website %}<a href="{{ resume.identity.website }}">{{ resume.identity.website }}</a>{% endif %}
+        {% if resume.identity.github %}<a href="{{ resume.identity.github }}">GitHub</a>{% endif %}
+        {% if resume.identity.linkedin %}<a href="{{ resume.identity.linkedin }}">LinkedIn</a>{% endif %}
+      </p>
+    </header>
+    {% for section in resume.section_order %}
+      {% if section == "summary" %}
+      <section><h2>{{ section_labels.summary }}</h2><p>{{ resume.summary }}</p></section>
+      {% elif section == "experience" and resume.sections.experience and resume.employment %}
+      <section><h2>{{ section_labels.experience }}</h2>
+        {% for selected in resume.employment %}
+        <article class="entry">
+          <div class="entry-heading"><h3>{{ localize(selected.employment.position) }} · {{ selected.employment.employer }}</h3><span>{{ selected.employment.start_date }} – {{ date_label(selected.employment.end_date) }}</span></div>
+          <ul>{% for bullet in selected.bullets %}<li>{{ localize(bullet.text) }}{% if bullet.quantified_impact %} — {{ localize(bullet.quantified_impact) }}{% endif %}</li>{% endfor %}</ul>
+        </article>
+        {% endfor %}
+      </section>
+      {% elif section == "skills" and resume.sections.skills and resume.skills %}
+      <section><h2>{{ section_labels.skills }}</h2>
+        <dl class="skills">{% for category, skills in resume.skills %}<dt>{{ category_label(category) }}</dt><dd>{{ skills | map(attribute="name") | join(", ") }}</dd>{% endfor %}</dl>
+      </section>
+      {% elif section == "projects" and resume.sections.projects and resume.projects %}
+      <section><h2>{{ section_labels.projects }}</h2>
+        {% for project in resume.projects %}<article class="entry project">
+          <div class="entry-heading"><h3>{{ project.name }}</h3><span>{% if project.repository_url %}<a href="{{ project.repository_url }}">Repository</a>{% endif %}{% if project.demo_url %}<a href="{{ project.demo_url }}">Demo</a>{% endif %}</span></div>
+          <p>{{ localize(project.summary) }}</p>
+          {% if project.technologies %}<p class="technology">{{ project.technologies | join(" · ") }}</p>{% endif %}
+        </article>{% endfor %}
+      </section>
+      {% elif section == "achievements" and resume.sections.achievements and resume.achievements %}
+      <section><h2>{{ section_labels.achievements }}</h2><ul>{% for achievement in resume.achievements %}<li><strong>{{ localize(achievement.title) }}</strong>{% if achievement.description %}: {{ localize(achievement.description) }}{% endif %}</li>{% endfor %}</ul></section>
+      {% elif section == "education" and resume.sections.education and resume.education %}
+      <section><h2>{{ section_labels.education }}</h2>{% for item in resume.education %}<article class="entry"><div class="entry-heading"><h3>{{ item.institution }}</h3><span>{{ item.start_date }} – {{ date_label(item.end_date) }}</span></div><p>{{ localize(item.degree) }} · {{ localize(item.field_of_study) }}</p></article>{% endfor %}</section>
+      {% endif %}
+    {% endfor %}
+  </main>
+</body>
+</html>

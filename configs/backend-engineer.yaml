@@ -1,0 +1,12 @@
+id: backend-engineer
+headline:
+  zh-TW: Python Backend Engineer
+  en: Python Backend Engineer
+summary_id: backend
+skill_category_order: [programming-languages, backend-engineering, databases, devops-ci-cd, cloud-platforms, monitoring-reliability, automation, data-engineering]
+project_ids: [quant-trading-platform, commerce-competitive-intelligence, manufacturing-intelligence]
+achievement_ids: []
+experience_bullets: {}
+section_order: [summary, skills, experience, projects, achievements, education]
+sections: { experience: true, education: true, skills: true, projects: true, achievements: true }
+allowed_verification_statuses: [verified, user_provided]

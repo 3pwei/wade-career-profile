@@ -1,0 +1,3 @@
+# Exact values only. This mechanism is limited to deliberately public contact details.
+# Secrets, private keys, and identity numbers can never be allowlisted.
+allowed_public_contact_values: []
