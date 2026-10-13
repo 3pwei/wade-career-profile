@@ -89,21 +89,28 @@
 
 **Evidence boundary:** Claim status `user_provided`; technical specifics `unverified`. No independently reviewed incident logs, code diff, affected fields or measured outcomes. Do not state that the profile owner changed field types, rebuilt indexes, resolved a particular production defect, or improved search speed. A separate Kibana certificate discussion is not evidence of an Elasticsearch fix.
 
-### 10 — Power BI reporting integration and production data troubleshooting
+### 10 — Power BI / BI data integration and production troubleshooting
 
-**User-confirmed responsibilities:** Assisted with Power BI report data connections; supported reports that presented processed or calculated results stored in Azure Databricks Delta Tables. During rotating operational duty, checked that reports displayed correctly. The types of incidents handled included **incorrect report figures, missing records and data that had not updated**.
+**User-confirmed responsibilities:** Assisted with Power BI data-source integration and provided data-processing / calculated results from Azure Databricks Delta Tables for BI reporting. During rotating operational duty, checked report correctness and freshness. Diagnosed incorrect figures, missing data, and reports that had not updated.
 
-**Troubleshooting scope:** These incidents are consistent with upstream data freshness, missing or inconsistent data, or report-facing data issues, but the actual root cause and corrective action of any specific incident have **not yet been recalled**. Do not state that a refresh job, DAX expression, source connector, SQL query, Delta transformation or report measure was fixed unless individually confirmed.
+**Confirmed investigation and remediation methods:**
+- Queried Delta Tables to check whether expected source / calculated records had been produced or updated.
+- Inspected Azure Data Factory and Databricks Pipeline execution results.
+- Used SQL to compare reported metrics against source data and downstream table results.
+- Investigated scheduling, latest-data timestamps and data latency.
+- Modified SQL / PySpark processing logic to repair upstream data issues affecting reports.
 
-**Historical technical context:** Previous career discussions named Power BI as a downstream consumer of Databricks / Delta data. Other discussions of ReportingDB, Fabric SQL Endpoint and Direct Lake were technical exploration, not proof of those connection modes in production.
+**Candidate 104 wording (zh-TW):**
+- **Power BI / Data Integration：** 協助企業 Power BI 報表資料串接，將 Azure Databricks／Delta Table 計算結果提供下游 BI 報表呈現。
+- **Data Validation / Reconciliation：** 針對報表數值異常、資料缺漏或未更新，使用 SQL 比對來源資料及 Delta Table，協助確認報表資料正確性。
+- **Pipeline Monitoring / Data Freshness：** 配合例行值班，查看 ADF／Databricks Pipeline 執行狀態、資料更新時間與排程，排查資料延遲。
+- **SQL / PySpark Troubleshooting：** 修正報表上游 SQL／PySpark 資料處理邏輯，處理資料異常並支援下游報表運作。
 
-**Candidate 104 wording (zh-TW):** **Power BI / BI Data Integration & Troubleshooting：** 協助企業 Power BI 報表資料串接，將 Azure Databricks／Delta Table 計算結果提供 BI 報表呈現；參與例行值班檢查報表資料是否正常更新，並針對報表數值異常、資料缺漏與未更新等問題進行調查，協助維持下游資料呈現品質。
+**Candidate English wording:** Supported Power BI reporting integrations backed by calculated Azure Databricks Delta Table data. During operational rotations, investigated stale or incorrect report data through Delta Table queries, SQL source-to-report comparisons, ADF/Databricks execution history, scheduling and freshness checks; modified upstream SQL/PySpark logic to correct data problems.
 
-**Candidate English wording:** **Power BI / BI Data Integration & Troubleshooting:** Supported enterprise Power BI data connections and reporting of calculated results from Azure Databricks Delta Tables. Performed routine report checks and investigated incorrect figures, missing data and stale report data.
+**Keywords:** Microsoft Power BI, Azure Databricks, Azure Data Factory (ADF), Python, PySpark, SQL, Delta Lake, Delta Table, ETL, BI Integration, Data Validation, Data Reconciliation, Data Freshness, Production Monitoring, Troubleshooting.
 
-**Keywords:** Power BI, Azure Databricks, Delta Lake, Delta Table, SQL, BI Integration, Data Reporting, Data Validation, Data Freshness, Troubleshooting, Production Monitoring.
-
-**Evidence boundary:** User-provided scope, without a verified incident-specific root cause or fix. No claim of DAX, Power Query, Semantic Model, Refresh API, DirectQuery/Direct Lake, RLS, dashboard design ownership or measurable defect reduction.
+**Evidence boundary:** The responsibilities above are confirmed through profile-owner recollection (status: `user_provided`); incident logs, exact root causes, original diffs and quantitative improvements have not been independently reviewed. Do not claim DAX, Power Query, semantic-model design, report-authoring ownership, RLS, DirectQuery, Direct Lake, or a specific Power BI refresh connector without further confirmation. Historical discussions of Fabric/ReportingDB do not establish use in this production case.
 
 ## Enterprise SDLC responsibilities (cross-cutting)
 
