@@ -1,0 +1,48 @@
+[build-system]
+requires = ["hatchling==1.27.0"]
+build-backend = "hatchling.build"
+
+[project]
+name = "wade-career-profile"
+version = "0.1.0"
+description = "Privacy-conscious career profile and resume generator"
+readme = "README.md"
+requires-python = ">=3.12"
+license = { text = "Proprietary" }
+authors = [{ name = "Wade Huang" }]
+dependencies = [
+  "jinja2==3.1.6",
+  "playwright==1.55.0",
+  "pydantic==2.11.9",
+  "pypdf==6.10.0",
+  "pyyaml==6.0.3",
+  "rich==14.1.0",
+  "typer==0.19.2",
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest==8.4.2",
+  "pytest-cov==7.0.0",
+  "ruff==0.13.2",
+]
+
+[project.scripts]
+career = "career_profile.cli:app"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/career_profile"]
+
+[tool.pytest.ini_options]
+addopts = "-q"
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP", "SIM", "RUF"]
+
+[tool.ruff.format]
+quote-style = "double"

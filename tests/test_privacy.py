@@ -1,0 +1,40 @@
+from __future__ import annotations
+
+from pathlib import Path
+
+import pytest
+
+from career_profile.errors import PrivacyError
+from career_profile.privacy import assert_public_tree_safe, load_allowlist, scan_text
+
+
+def test_sensitive_value_is_redacted() -> None:
+    unsafe = "api" + "_key = " + "synthetic-secret-value"
+    findings = scan_text(unsafe, Path("fixture.yaml"))
+    assert findings
+    diagnostic = findings[0].diagnostic()
+    assert "synthetic-secret-value" not in diagnostic
+    assert "[REDACTED secret]" in diagnostic
+
+
+def test_public_tree_rejects_unsafe_fixture(tmp_path: Path) -> None:
+    unsafe = "api" + "_key: " + "synthetic-secret-value"
+    (tmp_path / "unsafe.yaml").write_text(unsafe, encoding="utf-8")
+    with pytest.raises(PrivacyError, match="Public privacy check failed"):
+        assert_public_tree_safe(tmp_path)
+
+
+def test_contact_allowlist_is_exact(tmp_path: Path) -> None:
+    allowlist = tmp_path / "allowlist.yaml"
+    public_email = "public" + "@" + "example.test"
+    allowlist.write_text(f"allowed_public_contact_values:\n  - {public_email}\n", encoding="utf-8")
+    assert load_allowlist(allowlist) == {public_email}
+    assert not scan_text(public_email, Path("profile.yaml"), {public_email})
+
+
+def test_secret_cannot_be_allowlisted(tmp_path: Path) -> None:
+    allowlist = tmp_path / "allowlist.yaml"
+    unsafe = "api" + "_key=" + "synthetic-secret-value"
+    allowlist.write_text(f"allowed_public_contact_values:\n  - '{unsafe}'\n", encoding="utf-8")
+    with pytest.raises(PrivacyError, match="cannot permit"):
+        load_allowlist(allowlist)

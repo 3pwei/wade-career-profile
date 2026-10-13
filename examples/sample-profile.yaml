@@ -1,0 +1,55 @@
+# Fully synthetic example. No person, employer, metric, or URL below represents Wade Huang.
+identity:
+  full_name: Morgan Lin
+  professional_name: Morgan Lin
+  headline: { zh-TW: 合成資料工程師, en: Synthetic Data Engineer }
+  location: { zh-TW: 範例城市, en: Example City }
+  website: https://example.com
+  github: https://github.com/example
+  linkedin: null
+  private_contact: null
+summaries:
+  - { id: general, text: { zh-TW: 僅供測試的合成摘要。, en: Synthetic summary for testing only. }, verification_status: verified, evidence_url: null, last_reviewed: null }
+  - { id: backend, text: { zh-TW: 合成 Backend 摘要。, en: Synthetic backend summary. }, verification_status: verified, evidence_url: null, last_reviewed: null }
+  - { id: data-engineering, text: { zh-TW: 合成 Data Engineering 摘要。, en: Synthetic data engineering summary. }, verification_status: verified, evidence_url: null, last_reviewed: null }
+  - { id: cloud-platform, text: { zh-TW: 合成 Cloud Platform 摘要。, en: Synthetic cloud platform summary. }, verification_status: verified, evidence_url: null, last_reviewed: null }
+  - { id: data-analytics, text: { zh-TW: 合成 Data Analytics 摘要。, en: Synthetic data analytics summary. }, verification_status: verified, evidence_url: null, last_reviewed: null }
+employment: []
+education: []
+skills:
+  - id: python
+    name: Python
+    category: programming-languages
+    evidence_refs: [quant-trading-platform]
+    proficiency: null
+    verification_status: verified
+    evidence_url: null
+    last_reviewed: null
+achievements: []
+projects:
+  - &synthetic_project
+    id: quant-trading-platform
+    name: Synthetic Platform
+    domain: { zh-TW: 合成專案, en: Synthetic project }
+    summary: { zh-TW: 僅供 renderer 測試。, en: Used only to test the renderer. }
+    repository_url: https://github.com/example/synthetic-project
+    demo_url: null
+    technologies: [Python]
+    architecture_highlights: []
+    responsibilities: []
+    engineering_challenges: []
+    verified_outcomes: []
+    visibility: public
+    relevance_tags: [backend]
+    verification_status: verified
+    evidence_url: null
+    last_reviewed: null
+  - <<: *synthetic_project
+    id: manufacturing-intelligence
+    name: Synthetic Data Project
+  - <<: *synthetic_project
+    id: commerce-competitive-intelligence
+    name: Synthetic Automation Project
+  - <<: *synthetic_project
+    id: fake-cat
+    name: Synthetic Game Project

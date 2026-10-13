@@ -1,0 +1,12 @@
+id: data-analyst
+headline:
+  zh-TW: Data Analyst｜Analytics、Automation 與 Data Engineering
+  en: Data Analyst | Analytics, Automation, and Data Engineering
+summary_id: data-analytics
+skill_category_order: [data-analytics, programming-languages, databases, data-engineering, automation, cloud-platforms, other-relevant-skills, devops-ci-cd]
+project_ids: [manufacturing-intelligence, commerce-competitive-intelligence, quant-trading-platform]
+achievement_ids: []
+experience_bullets: {}
+section_order: [summary, skills, projects, experience, achievements, education]
+sections: { experience: true, education: true, skills: true, projects: true, achievements: true }
+allowed_verification_statuses: [verified, user_provided]

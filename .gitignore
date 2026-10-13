@@ -1,0 +1,34 @@
+# Private career data (keep only the directory placeholder)
+private/*
+!private/.gitkeep
+
+# Generated output
+dist/*
+!dist/.gitkeep
+
+# Secrets and local configuration
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+
+# Python / tooling
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+.venv/
+
+# Browser and temporary artifacts
+playwright-report/
+test-results/
+tmp/
+dist-*/
+*.tmp
+*.temp
+*.swp
+.DS_Store

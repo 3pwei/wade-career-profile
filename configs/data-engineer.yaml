@@ -1,0 +1,12 @@
+id: data-engineer
+headline:
+  zh-TW: Data Engineer｜Python、Spark 與 Cloud Data Platform
+  en: Data Engineer | Python, Spark, and Cloud Data Platforms
+summary_id: data-engineering
+skill_category_order: [data-engineering, programming-languages, databases, cloud-platforms, data-analytics, devops-ci-cd, automation, monitoring-reliability]
+project_ids: [manufacturing-intelligence, commerce-competitive-intelligence, quant-trading-platform]
+achievement_ids: []
+experience_bullets: {}
+section_order: [summary, skills, experience, projects, achievements, education]
+sections: { experience: true, education: true, skills: true, projects: true, achievements: true }
+allowed_verification_statuses: [verified, user_provided]

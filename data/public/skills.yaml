@@ -1,0 +1,28 @@
+skills:
+  - { id: python, name: Python, category: programming-languages, evidence_refs: [quant-trading-platform, manufacturing-intelligence, commerce-competitive-intelligence], verification_status: user_provided, evidence_url: null, last_reviewed: null }
+  - { id: sql, name: SQL, category: programming-languages, evidence_refs: [manufacturing-intelligence, commerce-competitive-intelligence], verification_status: user_provided, evidence_url: null, last_reviewed: null }
+  - { id: javascript-nodejs, name: JavaScript / Node.js, category: programming-languages, evidence_refs: [], verification_status: user_provided, evidence_url: null, last_reviewed: null }
+  - { id: bash, name: Bash, category: programming-languages, evidence_refs: [], verification_status: user_provided, evidence_url: null, last_reviewed: null }
+  - { id: fastapi, name: FastAPI, category: backend-engineering, evidence_refs: [quant-trading-platform], verification_status: user_provided, evidence_url: null, last_reviewed: null }
+  - { id: django, name: Django, category: backend-engineering, evidence_refs: [], verification_status: user_provided, evidence_url: null, last_reviewed: null }
+  - { id: rest-api, name: REST API, category: backend-engineering, evidence_refs: [quant-trading-platform], verification_status: user_provided, evidence_url: null, last_reviewed: null }
+  - { id: databricks, name: Azure Databricks, category: data-engineering, evidence_refs: [manufacturing-intelligence], verification_status: user_provided, evidence_url: null, last_reviewed: null }
+  - { id: spark, name: Apache Spark, category: data-engineering, evidence_refs: [manufacturing-intelligence], verification_status: user_provided, evidence_url: null, last_reviewed: null }
+  - { id: delta-lake, name: Delta Lake, category: data-engineering, evidence_refs: [manufacturing-intelligence], verification_status: user_provided, evidence_url: null, last_reviewed: null }
+  - { id: azure-data-factory, name: Azure Data Factory, category: data-engineering, evidence_refs: [], verification_status: user_provided, evidence_url: null, last_reviewed: null }
+  - { id: azure, name: Azure, category: cloud-platforms, evidence_refs: [], verification_status: user_provided, evidence_url: null, last_reviewed: null }
+  - { id: aws, name: AWS, category: cloud-platforms, evidence_refs: [manufacturing-intelligence], verification_status: user_provided, evidence_url: null, last_reviewed: null }
+  - { id: cloudflare, name: Cloudflare, category: cloud-platforms, evidence_refs: [quant-trading-platform], verification_status: user_provided, evidence_url: null, last_reviewed: null }
+  - { id: docker, name: Docker, category: devops-ci-cd, evidence_refs: [quant-trading-platform], verification_status: user_provided, evidence_url: null, last_reviewed: null }
+  - { id: git, name: Git, category: devops-ci-cd, evidence_refs: [], verification_status: user_provided, evidence_url: null, last_reviewed: null }
+  - { id: ci-cd, name: CI/CD, category: devops-ci-cd, evidence_refs: [quant-trading-platform], verification_status: user_provided, evidence_url: null, last_reviewed: null }
+  - { id: linux, name: Linux, category: devops-ci-cd, evidence_refs: [], verification_status: user_provided, evidence_url: null, last_reviewed: null }
+  - { id: sql-server, name: SQL Server, category: databases, evidence_refs: [], verification_status: user_provided, evidence_url: null, last_reviewed: null }
+  - { id: mysql, name: MySQL, category: databases, evidence_refs: [], verification_status: user_provided, evidence_url: null, last_reviewed: null }
+  - { id: mongodb, name: MongoDB, category: databases, evidence_refs: [], verification_status: user_provided, evidence_url: null, last_reviewed: null }
+  - { id: tableau, name: Tableau, category: data-analytics, evidence_refs: [manufacturing-intelligence], verification_status: user_provided, evidence_url: null, last_reviewed: null }
+  - { id: n8n, name: n8n, category: automation, evidence_refs: [commerce-competitive-intelligence], verification_status: user_provided, evidence_url: null, last_reviewed: null }
+  - { id: python-automation, name: Python automation, category: automation, evidence_refs: [commerce-competitive-intelligence], verification_status: user_provided, evidence_url: null, last_reviewed: null }
+  - { id: operational-monitoring, name: Operational monitoring, category: monitoring-reliability, evidence_refs: [quant-trading-platform], verification_status: user_provided, evidence_url: null, last_reviewed: null }
+  - { id: technical-research, name: Technical research, category: other-relevant-skills, evidence_refs: [], verification_status: user_provided, evidence_url: null, last_reviewed: null }
+  - { id: project-management, name: Project management, category: other-relevant-skills, evidence_refs: [], verification_status: user_provided, evidence_url: null, last_reviewed: null }

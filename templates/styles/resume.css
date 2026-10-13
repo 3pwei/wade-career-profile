@@ -1,0 +1,40 @@
+@page {
+  size: A4;
+  margin: 15mm 16mm 16mm;
+}
+
+:root {
+  color: #20242a;
+  font-family: "Noto Sans TC", "Noto Sans CJK TC", "Inter", "Arial", sans-serif;
+  font-size: 10.2pt;
+  line-height: 1.45;
+}
+
+* { box-sizing: border-box; }
+body { margin: 0; background: #fff; color: #20242a; }
+.resume { max-width: 178mm; margin: 0 auto; }
+.identity { border-bottom: 1px solid #b8bec6; padding-bottom: 4mm; margin-bottom: 5mm; }
+h1 { font-size: 24pt; line-height: 1.1; letter-spacing: 0.01em; margin: 0 0 1.5mm; }
+.headline { color: #34495e; font-size: 12pt; font-weight: 600; margin: 0 0 2mm; }
+.contact { display: flex; flex-wrap: wrap; gap: 2mm 4mm; margin: 0; color: #505861; }
+a { color: #24577a; text-decoration: none; }
+section { break-inside: auto; margin: 0 0 4.5mm; }
+h2 { border-bottom: 1px solid #d8dce1; color: #263746; font-size: 12pt; letter-spacing: 0.04em; margin: 0 0 2.5mm; padding-bottom: 1mm; }
+h3 { font-size: 10.7pt; line-height: 1.35; margin: 0; }
+p { margin: 0 0 2mm; }
+ul { margin: 1.2mm 0 0; padding-left: 5mm; }
+li { margin-bottom: 1mm; }
+.entry { break-inside: avoid; margin-bottom: 3.2mm; }
+.entry-heading { display: flex; align-items: baseline; justify-content: space-between; gap: 5mm; }
+.entry-heading > span { color: #59636d; flex: 0 0 auto; font-size: 9.3pt; }
+.entry-heading a + a::before { color: #9aa1a9; content: " · "; }
+.skills { display: grid; grid-template-columns: 42mm 1fr; gap: 1.2mm 4mm; margin: 0; }
+.skills dt { color: #34495e; font-weight: 650; }
+.skills dd { margin: 0; }
+.project p { margin-top: 1mm; }
+.technology { color: #59636d; font-size: 9.2pt; }
+
+@media screen {
+  body { background: #eef1f4; padding: 12mm 0; }
+  .resume { background: #fff; box-shadow: 0 2mm 10mm rgb(31 42 53 / 12%); min-height: 297mm; padding: 15mm 16mm 16mm; }
+}

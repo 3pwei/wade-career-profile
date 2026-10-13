@@ -1,0 +1,51 @@
+# {{ resume.identity.professional_name }}
+
+**{{ resume.headline }}**
+
+{{ localize(resume.identity.location) }}{% if resume.identity.website %} · [{{ resume.identity.website }}]({{ resume.identity.website }}){% endif %}{% if resume.identity.github %} · [GitHub]({{ resume.identity.github }}){% endif %}{% if resume.identity.linkedin %} · [LinkedIn]({{ resume.identity.linkedin }}){% endif %}
+
+{% for section in resume.section_order %}
+{% if section == "summary" %}
+## {{ section_labels.summary }}
+
+{{ resume.summary }}
+{% elif section == "experience" and resume.sections.experience and resume.employment %}
+## {{ section_labels.experience }}
+
+{% for selected in resume.employment %}
+### {{ localize(selected.employment.position) }} · {{ selected.employment.employer }}
+
+{{ selected.employment.start_date }} – {{ date_label(selected.employment.end_date) }}
+
+{% for bullet in selected.bullets %}- {{ localize(bullet.text) }}{% if bullet.quantified_impact %} — {{ localize(bullet.quantified_impact) }}{% endif %}
+{% endfor %}
+{% endfor %}
+{% elif section == "skills" and resume.sections.skills and resume.skills %}
+## {{ section_labels.skills }}
+
+{% for category, skills in resume.skills %}- **{{ category_label(category) }}:** {{ skills | map(attribute="name") | join(", ") }}
+{% endfor %}
+{% elif section == "projects" and resume.sections.projects and resume.projects %}
+## {{ section_labels.projects }}
+
+{% for project in resume.projects %}
+### {{ project.name }}
+
+{{ localize(project.summary) }}
+
+{% if project.technologies %}**Tech:** {{ project.technologies | join(", ") }}
+
+{% endif %}{% if project.repository_url %}[Repository]({{ project.repository_url }}){% endif %}{% if project.demo_url %}{% if project.repository_url %} · {% endif %}[Demo]({{ project.demo_url }}){% endif %}
+{% endfor %}
+{% elif section == "achievements" and resume.sections.achievements and resume.achievements %}
+## {{ section_labels.achievements }}
+
+{% for achievement in resume.achievements %}- **{{ localize(achievement.title) }}**{% if achievement.description %}: {{ localize(achievement.description) }}{% endif %}
+{% endfor %}
+{% elif section == "education" and resume.sections.education and resume.education %}
+## {{ section_labels.education }}
+
+{% for item in resume.education %}- **{{ item.institution }}** — {{ localize(item.degree) }}, {{ localize(item.field_of_study) }} ({{ item.start_date }}–{{ date_label(item.end_date) }})
+{% endfor %}
+{% endif %}
+{% endfor %}

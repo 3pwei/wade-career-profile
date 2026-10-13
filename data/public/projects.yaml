@@ -1,0 +1,79 @@
+projects:
+  - id: quant-trading-platform
+    name: Quant Trading Platform
+    domain: { zh-TW: 交易平台／Backend／Cloud／DevOps, en: Trading Platform / Backend / Cloud / DevOps }
+    summary:
+      zh-TW: 研究、replay 與隔離 paper trading 平台；公開版本包含 API／CLI／UI 與安全 gate，live／auto 功能維持停用。
+      en: Research, replay, and isolated paper-trading platform; the public version includes API, CLI, UI, and safety gates, while live and auto capabilities remain disabled.
+    repository_url: https://github.com/3pwei/tw-quant-trading-platform
+    demo_url: null
+    technologies: [Python, FastAPI, Docker, CI/CD]
+    architecture_highlights:
+      - zh-TW: Platform orchestration 與 strategy implementation 分離，缺少外部 provider 時 fail closed。
+        en: Separates platform orchestration from strategy implementations and fails closed when an external provider is absent.
+    responsibilities: []
+    engineering_challenges: []
+    verified_outcomes: []
+    visibility: public
+    relevance_tags: [backend, data, cloud, platform]
+    verification_status: verified
+    evidence_url: https://github.com/3pwei/tw-quant-trading-platform
+    last_reviewed: 2026-10-13
+  - id: manufacturing-intelligence
+    name: Manufacturing Intelligence Platform
+    domain: { zh-TW: Data Engineering／Analytics, en: Data Engineering / Analytics }
+    summary:
+      zh-TW: 展示 AWS S3、Databricks、Spark、Delta Lake 與 Tableau 整合方式的資料工程專案。
+      en: Data engineering project demonstrating an integration of AWS S3, Databricks, Spark, Delta Lake, and Tableau.
+    repository_url: https://github.com/3pwei/manufacturing-intelligence-platform
+    demo_url: null
+    technologies: [AWS S3, Databricks, Apache Spark, Delta Lake, Tableau]
+    architecture_highlights:
+      - zh-TW: 使用 Bronze／Silver／Gold Delta layers 與 quarantine path 管理資料品質。
+        en: Uses Bronze, Silver, and Gold Delta layers with a quarantine path for data quality.
+    responsibilities: []
+    engineering_challenges: []
+    verified_outcomes: []
+    visibility: public
+    relevance_tags: [data, analytics, cloud]
+    verification_status: verified
+    evidence_url: https://github.com/3pwei/manufacturing-intelligence-platform
+    last_reviewed: 2026-10-13
+  - id: commerce-competitive-intelligence
+    name: Commerce Competitive Intelligence
+    domain: { zh-TW: Automation／ETL／Analytics, en: Automation / ETL / Analytics }
+    summary:
+      zh-TW: 以 Python、n8n、Google Sheets 與 Email reporting 串接 ETL 與輔助分析流程的個人專案。
+      en: Personal project connecting ETL and assisted analysis workflows with Python, n8n, Google Sheets, and email reporting.
+    repository_url: https://github.com/3pwei/commerce-competitive-intelligence
+    demo_url: null
+    technologies: [Python, n8n, Google Sheets, ETL]
+    architecture_highlights:
+      - zh-TW: 以 STG／ODS／TGT contracts、deterministic rules 與 replaceable adapters 分離核心流程與外部服務。
+        en: Separates core processing from external services through STG/ODS/TGT contracts, deterministic rules, and replaceable adapters.
+    responsibilities: []
+    engineering_challenges: []
+    verified_outcomes: []
+    visibility: public
+    relevance_tags: [data, analytics, automation]
+    verification_status: verified
+    evidence_url: https://github.com/3pwei/commerce-competitive-intelligence
+    last_reviewed: 2026-10-13
+  - id: fake-cat
+    name: Fake Cat
+    domain: { zh-TW: Game Development／Independent Project, en: Game Development / Independent Project }
+    summary:
+      zh-TW: Godot 獨立遊戲概念；repository 目前僅完成 P0 bootstrap，角色操作、互動與 2.5D gameplay 仍屬後續規劃。
+      en: Independent Godot game concept; the repository currently contains only the P0 bootstrap, while controls, interactions, and 2.5D gameplay remain planned work.
+    repository_url: null
+    demo_url: null
+    technologies: [Godot, Gameplay programming, 2.5D game design]
+    architecture_highlights: []
+    responsibilities: []
+    engineering_challenges: []
+    verified_outcomes: []
+    visibility: private
+    relevance_tags: [game-development]
+    verification_status: unverified
+    evidence_url: null
+    last_reviewed: null

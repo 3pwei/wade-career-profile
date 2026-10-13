@@ -1,0 +1,12 @@
+id: general
+headline:
+  zh-TW: Python 工程師｜Backend、Data 與 Cloud Platform
+  en: Python Engineer | Backend, Data, and Cloud Platforms
+summary_id: general
+skill_category_order: [programming-languages, backend-engineering, data-engineering, cloud-platforms, devops-ci-cd, databases, data-analytics, automation, monitoring-reliability, other-relevant-skills]
+project_ids: [quant-trading-platform, manufacturing-intelligence, commerce-competitive-intelligence, fake-cat]
+achievement_ids: []
+experience_bullets: {}
+section_order: [summary, experience, skills, projects, achievements, education]
+sections: { experience: true, education: true, skills: true, projects: true, achievements: true }
+allowed_verification_statuses: [verified, user_provided]

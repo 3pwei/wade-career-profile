@@ -1,0 +1,41 @@
+name: CI
+
+on:
+  pull_request:
+  push:
+    branches: [master]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  quality:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v6
+        with:
+          enable-cache: true
+      - name: Install Python and locked dependencies
+        run: uv sync --frozen --extra dev
+      - name: Ruff lint
+        run: uv run ruff check .
+      - name: Ruff format
+        run: uv run ruff format --check .
+      - name: Unit tests
+        run: uv run pytest
+      - name: Validate public data and privacy
+        run: |
+          uv run career validate
+          uv run career check-privacy
+      - name: Build synthetic Markdown and HTML
+        run: |
+          uv run career build --profile general --lang en --format markdown --data-dir examples/sample-profile.yaml --output-dir dist-ci
+          uv run career build --profile general --lang zh-TW --format markdown --data-dir examples/sample-profile.yaml --output-dir dist-ci
+          uv run career build --profile general --lang en --format html --data-dir examples/sample-profile.yaml --output-dir dist-ci
+          uv run career build --profile general --lang zh-TW --format html --data-dir examples/sample-profile.yaml --output-dir dist-ci
