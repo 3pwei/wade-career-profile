@@ -1,4 +1,4 @@
-# Wiwynn assignment — consolidated engineering experience (8 cases)
+# Wiwynn assignment — consolidated engineering experience (9 cases)
 
 > **Draft / user_provided / publication review required.** This is a non-canonical, public-safe review document for future Career Profile ingestion. Do not automatically include it in resume generation. Detailed employer-internal metrics, client feedback, customer communications, personal HR history, source code and infrastructure specifics must remain outside this public repository pending confidentiality review.
 
@@ -77,6 +77,18 @@
 
 **Evidence boundary:** Actual client library and offset/commit method unknown; no OOM confirmation, exact-once guarantee, or independently measured throughput improvement.
 
+### 09 — Elasticsearch index and mapping maintenance
+
+**Confirmed recalled work:** Maintained existing Elasticsearch Index / Mapping in a Wiwynn-related work context. The profile owner had also explored Elasticsearch data integration with Azure Databricks, Python Elasticsearch Client, document indexing and search verification.
+
+**Prior technical discussion evidence:** In 2024-12, tested Python Elasticsearch Client using `es.index()` with synthetic documents in a test index and `es.search()` with `match_all` / `match` queries; 2025-01 discussions covered Index, Mapping, Shard and Replica concepts. Synthetic test data is not evidence of production indexing or mapping changes.
+
+**Candidate 104 wording:** 參與既有 Elasticsearch Index 與 Mapping 維護，具備 Python Elasticsearch Client 操作經驗，曾透過 Index API、Search API 與 Query DSL 測試 JSON Document 寫入、查詢及資料驗證，並接觸 Azure Databricks 與 Elasticsearch 的資料整合情境。
+
+**Keywords:** Elasticsearch, Python, Elasticsearch Python Client, Index, Mapping, Document Indexing, Search API, Query DSL, JSON, Data Integration.
+
+**Evidence boundary:** No confirmed concrete mapping-type changes, reindex operation, production rollout or measurable improvement. A separate Kibana HTTPS/certificate troubleshooting discussion does not establish a production Elasticsearch fix. Treat client usage as historical test/research experience; keep production scope under review.
+
 ## Enterprise SDLC responsibilities (cross-cutting)
 
 - **SA:** Projects requiring fresh system analysis were less common because much work involved existing systems; **led SA and requirements/business-rule analysis when needed**. Infrequency is not lack of ownership.
@@ -92,7 +104,7 @@
 
 ## Proposed prioritization
 
-For Data Engineer roles: QMS coordination, CDP production operations, Delta performance, migration, Kafka, API batching, data quality, OOP PoC (short note). For Backend positions, emphasize API batching, Python Kafka, Python OOP PoC with its limitation and production troubleshooting; do not misrepresent data engineering as extensive enterprise backend service ownership.
+For Data Engineer roles: QMS coordination, CDP production operations, Delta performance, migration, Kafka, API batching, data quality, Elasticsearch maintenance (scope under review), OOP PoC (short note). For Backend positions, emphasize API batching, Python Kafka, Python OOP PoC with its limitation and production troubleshooting; do not misrepresent data engineering as extensive enterprise backend service ownership.
 
 ## Follow-up review checklist
 
