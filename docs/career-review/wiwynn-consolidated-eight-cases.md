@@ -1,4 +1,4 @@
-# Wiwynn assignment — consolidated engineering experience (9 cases)
+# Wiwynn assignment — consolidated engineering experience (10 cases)
 
 > **Draft / user_provided / publication review required.** This is a non-canonical, public-safe review document for future Career Profile ingestion. Do not automatically include it in resume generation. Detailed employer-internal metrics, client feedback, customer communications, personal HR history, source code and infrastructure specifics must remain outside this public repository pending confidentiality review.
 
@@ -88,6 +88,20 @@
 **Keywords:** Elasticsearch, Index, Mapping, Python, Elasticsearch Python Client. Additional keywords such as Reindex, Mapping Migration, Index Tuning, Kibana, Query DSL in production or Databricks–Elasticsearch production integration must not be attached to the maintenance claim without evidence.
 
 **Evidence boundary:** Claim status `user_provided`; technical specifics `unverified`. No independently reviewed incident logs, code diff, affected fields or measured outcomes. Do not state that the profile owner changed field types, rebuilt indexes, resolved a particular production defect, or improved search speed. A separate Kibana certificate discussion is not evidence of an Elasticsearch fix.
+
+### 10 — Power BI reporting integration and production checks
+
+**User-confirmed responsibilities:** Assisted in connecting Power BI reports to enterprise data sources and troubleshooting reported errors. During rotating duty coverage, checked whether Power BI reports operated correctly. In work involving Azure Databricks, used computed results saved in Delta Tables for downstream BI reporting/presentation.
+
+**Historical context, not production configuration evidence:** Career-related discussions in 2026-07 mention Power BI as a downstream consumer of Databricks/Delta data. Separate 2025-11 and 2026-08 conversations discuss reporting databases, Fabric SQL Endpoints and Direct Lake patterns as architecture or learning topics. These conversations **do not identify** the actual Power BI connector, connectivity mode, dataset refresh process or specific production incident at Wiwynn.
+
+**Candidate 104 wording (zh-TW):** **Power BI / Data Reporting Integration：** 協助企業 Power BI 報表資料串接與異常排查，將 Azure Databricks／Delta Table 的資料處理及計算結果提供下游 BI 報表呈現；配合例行值班確認報表顯示與執行狀態，協助釐清資料或報表問題。
+
+**Candidate English wording:** **Power BI / Data Reporting Integration:** Supported Power BI report connectivity and troubleshooting, prepared Databricks/Delta Table calculation outputs for downstream BI reporting, and performed routine report-health checks during rotating operational duty.
+
+**Keywords:** Power BI, Azure Databricks, Delta Lake, Delta Table, SQL, Data Reporting, BI Integration, Production Monitoring, Troubleshooting.
+
+**Evidence and boundary:** User-provided scope only; no original Power BI incident log, report, refresh failure, deployed connector/configuration or measured fix identified. Do not claim authoring DAX, Power Query M, semantic models, RLS, DirectQuery, Direct Lake, or Power BI workspace administration without confirmation. Do not claim ownership of full dashboard design.
 
 ## Enterprise SDLC responsibilities (cross-cutting)
 
