@@ -89,19 +89,21 @@
 
 **Evidence boundary:** Claim status `user_provided`; technical specifics `unverified`. No independently reviewed incident logs, code diff, affected fields or measured outcomes. Do not state that the profile owner changed field types, rebuilt indexes, resolved a particular production defect, or improved search speed. A separate Kibana certificate discussion is not evidence of an Elasticsearch fix.
 
-### 10 — Power BI reporting integration and production checks
+### 10 — Power BI reporting integration and production data troubleshooting
 
-**User-confirmed responsibilities:** Assisted in connecting Power BI reports to enterprise data sources and troubleshooting reported errors. During rotating duty coverage, checked whether Power BI reports operated correctly. In work involving Azure Databricks, used computed results saved in Delta Tables for downstream BI reporting/presentation.
+**User-confirmed responsibilities:** Assisted with Power BI report data connections; supported reports that presented processed or calculated results stored in Azure Databricks Delta Tables. During rotating operational duty, checked that reports displayed correctly. The types of incidents handled included **incorrect report figures, missing records and data that had not updated**.
 
-**Historical context, not production configuration evidence:** Career-related discussions in 2026-07 mention Power BI as a downstream consumer of Databricks/Delta data. Separate 2025-11 and 2026-08 conversations discuss reporting databases, Fabric SQL Endpoints and Direct Lake patterns as architecture or learning topics. These conversations **do not identify** the actual Power BI connector, connectivity mode, dataset refresh process or specific production incident at Wiwynn.
+**Troubleshooting scope:** These incidents are consistent with upstream data freshness, missing or inconsistent data, or report-facing data issues, but the actual root cause and corrective action of any specific incident have **not yet been recalled**. Do not state that a refresh job, DAX expression, source connector, SQL query, Delta transformation or report measure was fixed unless individually confirmed.
 
-**Candidate 104 wording (zh-TW):** **Power BI / Data Reporting Integration：** 協助企業 Power BI 報表資料串接與異常排查，將 Azure Databricks／Delta Table 的資料處理及計算結果提供下游 BI 報表呈現；配合例行值班確認報表顯示與執行狀態，協助釐清資料或報表問題。
+**Historical technical context:** Previous career discussions named Power BI as a downstream consumer of Databricks / Delta data. Other discussions of ReportingDB, Fabric SQL Endpoint and Direct Lake were technical exploration, not proof of those connection modes in production.
 
-**Candidate English wording:** **Power BI / Data Reporting Integration:** Supported Power BI report connectivity and troubleshooting, prepared Databricks/Delta Table calculation outputs for downstream BI reporting, and performed routine report-health checks during rotating operational duty.
+**Candidate 104 wording (zh-TW):** **Power BI / BI Data Integration & Troubleshooting：** 協助企業 Power BI 報表資料串接，將 Azure Databricks／Delta Table 計算結果提供 BI 報表呈現；參與例行值班檢查報表資料是否正常更新，並針對報表數值異常、資料缺漏與未更新等問題進行調查，協助維持下游資料呈現品質。
 
-**Keywords:** Power BI, Azure Databricks, Delta Lake, Delta Table, SQL, Data Reporting, BI Integration, Production Monitoring, Troubleshooting.
+**Candidate English wording:** **Power BI / BI Data Integration & Troubleshooting:** Supported enterprise Power BI data connections and reporting of calculated results from Azure Databricks Delta Tables. Performed routine report checks and investigated incorrect figures, missing data and stale report data.
 
-**Evidence and boundary:** User-provided scope only; no original Power BI incident log, report, refresh failure, deployed connector/configuration or measured fix identified. Do not claim authoring DAX, Power Query M, semantic models, RLS, DirectQuery, Direct Lake, or Power BI workspace administration without confirmation. Do not claim ownership of full dashboard design.
+**Keywords:** Power BI, Azure Databricks, Delta Lake, Delta Table, SQL, BI Integration, Data Reporting, Data Validation, Data Freshness, Troubleshooting, Production Monitoring.
+
+**Evidence boundary:** User-provided scope, without a verified incident-specific root cause or fix. No claim of DAX, Power Query, Semantic Model, Refresh API, DirectQuery/Direct Lake, RLS, dashboard design ownership or measurable defect reduction.
 
 ## Enterprise SDLC responsibilities (cross-cutting)
 
