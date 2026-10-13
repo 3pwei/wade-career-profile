@@ -77,17 +77,17 @@
 
 **Evidence boundary:** Actual client library and offset/commit method unknown; no OOM confirmation, exact-once guarantee, or independently measured throughput improvement.
 
-### 09 — Elasticsearch index and mapping maintenance
+### 09 — Elasticsearch maintenance (implementation details pending)
 
-**Confirmed recalled work:** Maintained existing Elasticsearch Index / Mapping in a Wiwynn-related work context. The profile owner had also explored Elasticsearch data integration with Azure Databricks, Python Elasticsearch Client, document indexing and search verification.
+**User-confirmed scope:** Participated in maintenance of existing Elasticsearch Index / Mapping in the Wiwynn work context. The precise production changes, symptoms, failure cause, fix, deployment and outcome are **not remembered** and cannot currently be substantiated.
 
-**Prior technical discussion evidence:** In 2024-12, tested Python Elasticsearch Client using `es.index()` with synthetic documents in a test index and `es.search()` with `match_all` / `match` queries; 2025-01 discussions covered Index, Mapping, Shard and Replica concepts. Synthetic test data is not evidence of production indexing or mapping changes.
+**Separate historical learning/test records (not attributed to the production maintenance case):** In 2024-12, explored Python Elasticsearch Client `es.index()` and `es.search()` using synthetic documents; Query DSL `match_all` / `match` examples were discussed. Index, Mapping, Shard and Replica concepts were discussed in 2025-01. These do not prove use of specific APIs, reindexing, or other features in the actual maintenance incident.
 
-**Candidate 104 wording:** 參與既有 Elasticsearch Index 與 Mapping 維護，具備 Python Elasticsearch Client 操作經驗，曾透過 Index API、Search API 與 Query DSL 測試 JSON Document 寫入、查詢及資料驗證，並接觸 Azure Databricks 與 Elasticsearch 的資料整合情境。
+**Conservative candidate 104 wording:** **Elasticsearch / Index & Mapping Maintenance：** 參與企業資料平台既有 Elasticsearch Index 與 Mapping 維護，具備相關資料索引及查詢概念；另曾使用 Python Elasticsearch Client 測試文件寫入與查詢功能。
 
-**Keywords:** Elasticsearch, Python, Elasticsearch Python Client, Index, Mapping, Document Indexing, Search API, Query DSL, JSON, Data Integration.
+**Keywords:** Elasticsearch, Index, Mapping, Python, Elasticsearch Python Client. Additional keywords such as Reindex, Mapping Migration, Index Tuning, Kibana, Query DSL in production or Databricks–Elasticsearch production integration must not be attached to the maintenance claim without evidence.
 
-**Evidence boundary:** No confirmed concrete mapping-type changes, reindex operation, production rollout or measurable improvement. A separate Kibana HTTPS/certificate troubleshooting discussion does not establish a production Elasticsearch fix. Treat client usage as historical test/research experience; keep production scope under review.
+**Evidence boundary:** Claim status `user_provided`; technical specifics `unverified`. No independently reviewed incident logs, code diff, affected fields or measured outcomes. Do not state that the profile owner changed field types, rebuilt indexes, resolved a particular production defect, or improved search speed. A separate Kibana certificate discussion is not evidence of an Elasticsearch fix.
 
 ## Enterprise SDLC responsibilities (cross-cutting)
 
