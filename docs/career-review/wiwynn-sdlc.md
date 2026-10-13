@@ -4,11 +4,11 @@
 
 ## Scope and role boundaries
 
-Participated in the enterprise software development life cycle for data engineering changes. Primary hands-on stages: **SD, DEV, UT, SIT, UAT, QAS, MTP**. **SA involvement was limited**, mainly clarification of existing business requirements rather than frequent greenfield system analysis.
+Participated in the enterprise software development life cycle for data engineering changes. Hands-on stages include **SA (when required), SD, DEV, UT, SIT, UAT, QAS, MTP**. SA tasks arose relatively infrequently because projects often modified existing systems; **when a project required system analysis, the profile owner led that SA work**. Frequency of SA opportunities must not be confused with level of responsibility.
 
 | Stage | Contribution |
 | --- | --- |
-| SA / System Analysis | Occasional requirement clarification and review of business rules and analysis documents; limited involvement. |
+| SA / System Analysis | Led system analysis and requirements/business-rule clarification when SA was needed; such opportunities occurred less frequently in existing-system enhancement work. |
 | SD / System Design | Wrote/reviewed design documents, data workflows, mapping specifications and processing logic. |
 | DEV / Development | Implemented or modified SQL, Python / PySpark, Azure Data Factory pipelines, and Azure Databricks notebooks. |
 | UT / Unit Testing | Designed and executed unit-level tests for processing logic and changes. |
@@ -21,11 +21,11 @@ This does **not** establish sole release approval authority, ownership of all ph
 
 ## Candidate 104 resume statement (zh-TW)
 
-**Enterprise SDLC / Software Engineering Delivery：** 參與企業資料工程專案從設計、開發、測試到正式上線的完整軟體開發生命週期（SDLC），主要負責 SD（系統設計）、DEV（SQL／Python／PySpark／ADF／Databricks 開發）、UT（單元測試）、SIT（系統整合測試），並參與 UAT（使用者驗收）、QAS（測試環境品質驗證）及 MTP（正式部署與交接）；另有少量 SA（需求分析與業務規則釐清）經驗。
+**Enterprise SDLC / Software Engineering Delivery：** 參與企業資料工程專案從設計、開發、測試到正式上線的完整軟體開發生命週期（SDLC），負責 SD（系統設計）、DEV（SQL／Python／PySpark／ADF／Databricks 開發）、UT（單元測試）、SIT（系統整合測試），並執行 UAT（使用者驗收支援與問題修正）、QAS（測試環境部署與品質驗證）及 MTP（正式部署與交接）；由於專案多為既有系統調整，SA（系統分析）需求較少，但遇到需要 SA 的專案時，由我主導需求與業務規則分析。
 
 ## Candidate resume statement (en)
 
-**Enterprise SDLC / Engineering Delivery:** Contributed to enterprise data engineering delivery across system design, implementation, unit testing, integration testing, user acceptance, pre-production quality checks, and production rollout/handover. Built and modified SQL, Python/PySpark, Azure Data Factory pipelines, and Azure Databricks workflows. Had limited involvement in system analysis and requirements clarification.
+**Enterprise SDLC / Engineering Delivery:** Contributed to enterprise data engineering delivery across system design, implementation, unit testing, integration testing, user acceptance, pre-production quality checks, and production rollout/handover. Built and modified SQL, Python/PySpark, Azure Data Factory pipelines, and Azure Databricks workflows. System analysis was required less often in existing-system enhancement projects; when required, led the SA work and clarified requirements and business rules.
 
 ## Verification and publication gate
 
