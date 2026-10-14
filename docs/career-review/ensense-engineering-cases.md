@@ -4,9 +4,9 @@
 
 ## Context and evidence conventions
 
-- Work context: EnSense (廣域科技), IoT environmental-sensor platforms; historical role/title and precise employment dates must be checked against HR documentation before canonical ingestion.
+- Work context: EnSense (廣域科技), IoT environmental-sensor platforms. **Official employment and separation-certificate title: Cloud Engineer (雲端工程師)**, per owner recollection of separation documentation; exact dates and document evidence await canonical review. **Do not label the official position Team Lead, Supervisor or RD Manager.**
 - Core platform reported by owner: sensors send measurements to MongoDB / AWS S3; Node.js Forwarders on AWS EC2 read, calibrate and deliver payloads to clients via HTTPS / MQTT. S3 and MongoDB are distinct services, **not one combined database**.
-- Role breadth: hands-on Node.js/Python engineering, AWS EC2 operations, data processing and analytical modeling, deployment ownership, and formal leadership of 1–2 engineers.
+- Role breadth: hands-on Node.js/Python engineering, AWS EC2 operations, data processing and analytical modeling, deployment ownership, and **ongoing sub-team leadership duties while holding the official Cloud Engineer title**. Approximately one month after joining, the RD Manager asked the owner to lead 1–2 other engineers; this continued until departure, not merely a short trial.
 - Unless explicitly qualified as confirmed, figures are owner estimates. Keep team scope and individual authorship separate. Projects/customers are generalized here for public review.
 
 ## Case inventory
@@ -92,13 +92,17 @@ Google Sheets completeness chart/colors belong to 04; O3 trend comparisons to 05
 
 **Evidence limits:** Deployments are on-demand and predominantly manual, **not a complete CI/CD pipeline**; no automatic rollback, zero-downtime claims, verified MTTR or deployment efficiency metrics.
 
-### 10 — Formal hands-on technical leadership
+### 10 — Cloud Engineer with ongoing sub-team technical leadership
 
-**Organizational role:** Formal team lead/supervisor responsible for 1–2 engineers and involved in people evaluation, staffing priorities, system design/technology selection, code review/merges, go/no-go production releases, estimates, commitments and cross-team coordination. Work tracking via GitLab Issues, Notion, Excel/Sheets; PM or management typically owned primary client contact and owner provided technical support.
+**Official title versus duties:** The personnel/separation-certificate title remained **Cloud Engineer** throughout employment; no formal promotion or title change is evidenced. Approximately one month after hire, the RD Manager assigned the owner to lead a sub-team of **1–2 other engineers**, continuously until departure. These are sustained **functional team-lead responsibilities**, not proof of an official Team Lead/Supervisor job title.
+
+**Organization and reporting:** The RD Manager led the RD department. Within the cloud engineering function, the owner led one sub-team and **reported directly to the RD Manager**. A separate, parallel AWS S3-focused sub-team of approximately **three people** had another lead who also reported directly to the same manager. The owner was **not the only team lead** and did **not** manage the other S3 sub-team or the entire RD organization. “Forwarder/data sub-team” is a functional description, not a verified formal team name.
+
+**Actual leadership duties:** Assigned work and priorities, guided engineers, reviewed/merged code, made architecture and technology choices within the owner's scope, decided production release timing, estimated delivery schedules, coordinated other functions and assisted with **annual performance appraisals** (not claimed as sole final evaluator). Work tracking via GitLab Issues, Notion, Excel/Sheets. PM or management typically owned primary client contact; owner provided technical support.
 
 **Representative project:** Proactively proposed and led Forwarder redesign end-to-end: audited inherited code, set modular/config/generator architecture, wrote core modules, delegated other modules/tests, reviewed code, established acceptance checks, coordinated existing-service support and staged deployments, and ultimately migrated all existing Forwarder projects. Worked with teammates on legacy code understanding, coached via reviews, prepared JSON examples, retained rollback procedures, established ongoing review/merge and change-testing norms, and assigned shared-module maintainers.
 
-**Evidence limits:** Exact number of migrated Forwarders unknown; do not equate with ~40 monitored projects. Case 01 LOC reduction is a **single engineering outcome**, not an additional management KPI. No separate team productivity or on-time delivery rate measured.
+**Evidence limits:** Exact number of migrated Forwarders unknown; do not equate with ~40 monitored projects. Case 01 LOC reduction is a **single engineering outcome**, not an additional management KPI. No separate team productivity or on-time delivery rate measured. Sub-team leadership was persistent **without an HR title change**; the second S3 sub-team and RD Manager are organizational context, **not** the owner's direct reports. Exact start/end of delegated lead duties is approximate.
 
 ## Reported numeric evidence ledger
 
@@ -110,14 +114,14 @@ Google Sheets completeness chart/colors belong to 04; O3 trend comparisons to 05
 | Daily manual checks | Half day -> 30 min | 04, 87.5% estimated only if half-day = 4 hours |
 | Monthly acceptance volume | >20 projects | 07, approximate |
 | Per-project report effort | 60–90 -> 15 min | 07, 75–83.3% range; review time vs former manual creation |
-| Team reports | 1–2 directly managed engineers | 10 |
+| Sub-team direct reports | 1–2 other engineers | 10, delegated ongoing lead responsibilities; official title remains Cloud Engineer |
 | O3 improvement | Bias lower, cycle shape closer to reference | 05, numerical values unavailable |
 | Duplicate forwarding defect | Fixed, no later recurrence recalled | 02, no affected volume |
 | Migration | All existing Forwarder projects progressively migrated | 10, exact count unknown |
 
 ## Required publication/evidence review before canonical ingestion
 
-1. Confirm formal company/title/dates from authoritative HR material and publication permission.
+1. Verify Cloud Engineer title against separation certificate and employment dates against HR material; do not promote delegated lead duties into an official Team Lead title.
 2. Review whether client or project names, scale, equipment architecture, source details and metrics are employer-confidential even if paraphrased.
 3. Verify code size comparison, monitoring scale/time baseline and report before/after time definitions before public quantified claims.
 4. Recover, where possible, O3 Bias/R² measurements; otherwise use qualitative wording only.
