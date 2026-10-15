@@ -7,7 +7,13 @@ Scope: Academia Sinica, Research Center for Environmental Changes. Do not infer 
 
 中央研究院｜研究助理（職稱、任職起訖日期待 canonical evidence review）
 
-負責 Python 資料工程、自動化批次流程、數值模型開發與空間演算法研究，涵蓋 GIS 歷史資料重建、氣象資料處理、森林生物量與水文模擬，以及跨機構研究成果交付。
+主要投入 Python 資料分析與視覺化，並負責資料工程、自動化批次流程、數值模型開發與空間演算法研究；涵蓋 GIS 歷史資料重建、氣象資料處理、森林生物量與水文模擬，以及跨機構研究成果交付。
+
+### 資料分析與視覺化（104 第一優先）
+- 主要以 Python、Pandas、NumPy、SciPy 分析氣候、森林生物量、土地利用與水文資料，處理時間序列、統計比較及地理空間分析。
+- 經常使用 Matplotlib、Seaborn 製作靜態研究圖表、趨勢圖、相關性與誤差比較圖；使用 Plotly 製作可縮放、Hover 查看數值的互動式圖表。
+- Tableau 僅用於臨時資料探索；R 主要是執行或整合其他研究人員撰寫的腳本，熟練度不等同 Python。
+- 主要交付為論文、研究報告及跨機構簡報圖表；**未確認**有 Dash 或正式 Tableau Dashboard 開發，不得宣稱。
 
 ### 資料工程與自動化
 - 以 Python、R、Shell Script、Cron、SCP 建立跨主機資料流程：每日取得中央氣象局 15 天 NetCDF 預報資料，轉換為 ORCHIDEE 模型輸入、執行模擬，再將結果整理成水資源與農業研究團隊所需格式並傳送至合作主機。
@@ -53,3 +59,16 @@ Scope: Academia Sinica, Research Center for Environmental Changes. Do not infer 
 ## Proposed canonical integration (separate follow-up)
 
 After review, map the employment facts into `data/public/experience.yaml`, publication evidence into `data/public/achievements.yaml`, and skills with stable evidence refs. Follow `docs/data-schema.md`; do not place speculative facts into `verified` records. Run ruff, pytest, `career validate`, `career check-privacy`, and review all public claims before merging.
+
+## 104 presentation order (2026-10-16 user clarification)
+
+1. 資料分析與視覺化 — Python, Matplotlib, Seaborn, Plotly; Tableau exploratory only.
+2. Python 資料工程與自動化 — Pandas, NumPy, Shell, Cron, SCP, NetCDF.
+3. 演算法與數值模型開發 — Python, Fortran, ORCHIDEE, HPC; CNN exploratory only.
+4. 跨機構專案與成果交付 — Weather Bureau, universities, reports.
+5. 國際研究與學術成果 — publications, international collaborations.
+
+### Verification notes
+- The tool use and relative proficiency above are **user_provided**, not externally verified.
+- Interactive Plotly charts are not evidence of a deployed dashboard; exploratory Tableau use is not evidence of production BI ownership.
+- This review file remains non-canonical; do not auto-promote facts to `verified` in `data/public/`.
