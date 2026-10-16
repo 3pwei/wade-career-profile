@@ -39,3 +39,8 @@ jobs:
           uv run career build --profile general --lang zh-TW --format markdown --data-dir examples/sample-profile.yaml --output-dir dist-ci
           uv run career build --profile general --lang en --format html --data-dir examples/sample-profile.yaml --output-dir dist-ci
           uv run career build --profile general --lang zh-TW --format html --data-dir examples/sample-profile.yaml --output-dir dist-ci
+      - name: Build real resume profiles (Markdown and HTML)
+        run: |
+          uv run career build-all --no-pdf --output-dir dist-ci-real
+          test "$(find dist-ci-real -type f -name '*.md' | wc -l)" -eq 10
+          test "$(find dist-ci-real -type f -name '*.html' | wc -l)" -eq 10

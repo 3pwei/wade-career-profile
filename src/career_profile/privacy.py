@@ -42,6 +42,7 @@ PATTERNS: dict[str, re.Pattern[str]] = {
     ),
 }
 NON_ALLOWLISTABLE = {"secret", "private-key", "taiwan-identity-number"}
+_DOI_PATTERN = re.compile(r"(?i)\b10\.\d{4,9}/[^\s;,]+")
 TEXT_SUFFIXES = {".md", ".yaml", ".yml", ".toml", ".py", ".j2", ".css", ".txt", ".json"}
 
 
@@ -63,8 +64,13 @@ def scan_text(text: str, path: Path, allowlist: set[str] | None = None) -> list[
     allowlist = allowlist or set()
     findings: list[Finding] = []
     for line_number, line in enumerate(text.splitlines(), start=1):
+        doi_spans = [match.span() for match in _DOI_PATTERN.finditer(line)]
         for category, pattern in PATTERNS.items():
             for match in pattern.finditer(line):
+                if category == "phone" and any(
+                    start <= match.start() and match.end() <= end for start, end in doi_spans
+                ):
+                    continue
                 if category not in NON_ALLOWLISTABLE and match.group(0) in allowlist:
                     continue
                 findings.append(Finding(path, line_number, category))
