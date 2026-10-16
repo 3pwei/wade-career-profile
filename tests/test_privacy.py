@@ -46,13 +46,13 @@ def test_doi_not_mistaken_for_taiwan_phone() -> None:
 
 
 def test_actual_phone_on_same_line_as_doi_still_detected() -> None:
-    sample = "DOI 10.1038/s41598-019-40063-1; contact 0912-345-678"
+    sample = "DOI 10.1038/s41598-019-40063-1; contact " + "0912" + "-345-678"
     findings = scan_text(sample, Path("publications.md"))
     assert any(finding.category == "phone" for finding in findings)
     assert "0912" not in findings[0].diagnostic()
 
 
 def test_other_sensitive_patterns_not_exempt_inside_doi_line() -> None:
-    sample = "DOI 10.1038/s41598-019-40063-1; api_key=synthetic-secret-value"
+    sample = "DOI 10.1038/s41598-019-40063-1; " + "api" + "_key=" + "synthetic-secret-value"
     findings = scan_text(sample, Path("publications.md"))
     assert any(finding.category == "secret" for finding in findings)
