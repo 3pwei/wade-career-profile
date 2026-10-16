@@ -1,2 +1,72 @@
-# Public employment facts intentionally remain empty until employer, title, and dates are reviewed.
-employment: []
+# Career timeline — owner-confirmed, not independently verified
+# All dates use YYYY-MM, and verification_status=user_provided.
+# ITRI date remains unconfirmed and is documented separately for review.
+employment:
+  - id: ntu-research-assistant
+    employer: National Taiwan University
+    position: { zh-TW: 研究助理, en: Research Assistant }
+    employment_type: employee
+    start_date: 2016-06
+    end_date: 2016-12
+    technologies: [Python 2.7, ArcPy, ArcGIS, Shapefile, EPA SWMM]
+    verification_status: user_provided
+    bullets:
+      - id: ntu-gis-automation
+        kind: responsibility
+        text:
+          zh-TW: 使用 Python 2.7 與 ArcPy 自動處理臺北市下水道 GIS 圖資（.shp），擷取資料並轉換為 EPA SWMM 模型輸入檔（.inp）。
+          en: Used Python 2.7 and ArcPy to automate processing of Taipei sewer GIS shapefiles and convert extracted data into EPA SWMM input files (.inp).
+        relevance_tags: [data-engineer, data-analyst]
+        verification_status: user_provided
+      - id: ntu-swmm-analysis
+        kind: responsibility
+        text:
+          zh-TW: 分析 SWMM 模擬的節點淹水量、管線流量、水位及降雨逕流量，並製作 GIF 動畫呈現模擬變化。
+          en: Analyzed SWMM outputs including node flooding, conduit flow, water level, and rainfall runoff, and created GIF animations of simulation results.
+        relevance_tags: [data-analyst]
+        verification_status: user_provided
+      - id: ntu-research-support
+        kind: responsibility
+        text:
+          zh-TW: 協助科技部研究計畫書撰寫與計畫經費核銷等行政作業。
+          en: Supported Ministry of Science and Technology research proposal writing and project expense administration.
+        verification_status: user_provided
+
+  - id: sinica-research-assistant
+    employer: Academia Sinica
+    position: { zh-TW: 研究助理, en: Research Assistant }
+    employment_type: employee
+    start_date: 2017-02
+    end_date: 2022-06
+    verification_status: user_provided
+    bullets: []
+
+  - id: ensense-cloud-engineer
+    employer: EnSense
+    position: { zh-TW: 雲端工程師, en: Cloud Engineer }
+    employment_type: employee
+    start_date: 2022-06
+    end_date: 2024-01
+    verification_status: user_provided
+    bullets: []
+
+  - id: wits-senior-software-engineer
+    employer: WITS
+    position: { zh-TW: 高級軟體工程師（派駐 Wiwynn 擔任雲端資料工程師）, en: Senior Software Engineer (assigned to Wiwynn as a Cloud Data Engineer) }
+    employment_type: employee
+    start_date: 2024-01
+    end_date: 2026-06
+    verification_status: user_provided
+    bullets:
+      - id: wits-wiwynn-assignment
+        kind: responsibility
+        text:
+          zh-TW: 2024/01–2025/11 派駐 Wiwynn（緯穎），擔任雲端資料工程師。
+          en: Assigned to Wiwynn as a Cloud Data Engineer from January 2024 through November 2025.
+        verification_status: user_provided
+      - id: wits-parental-leave
+        kind: responsibility
+        text:
+          zh-TW: 2025/12–2026/05 育嬰留職停薪；2026/06 因組織異動結束任職。
+          en: Took parental leave from December 2025 through May 2026; employment ended in June 2026 following organizational changes.
+        verification_status: user_provided
