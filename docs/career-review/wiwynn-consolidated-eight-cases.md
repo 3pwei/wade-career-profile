@@ -1,4 +1,4 @@
-# Wiwynn assignment — consolidated engineering experience (10 cases)
+# Wiwynn assignment — consolidated engineering experience (11 cases)
 
 > **Draft / user_provided / publication review required.** This is a non-canonical, public-safe review document for future Career Profile ingestion. Do not automatically include it in resume generation. Detailed employer-internal metrics, client feedback, customer communications, personal HR history, source code and infrastructure specifics must remain outside this public repository pending confidentiality review.
 
@@ -111,6 +111,20 @@
 **Keywords:** Microsoft Power BI, Azure Databricks, Azure Data Factory (ADF), Python, PySpark, SQL, Delta Lake, Delta Table, ETL, BI Integration, Data Validation, Data Reconciliation, Data Freshness, Production Monitoring, Troubleshooting.
 
 **Evidence boundary:** The responsibilities above are confirmed through profile-owner recollection (status: `user_provided`); incident logs, exact root causes, original diffs and quantitative improvements have not been independently reviewed. Do not claim DAX, Power Query, semantic-model design, report-authoring ownership, RLS, DirectQuery, Direct Lake, or a specific Power BI refresh connector without further confirmation. Historical discussions of Fabric/ReportingDB do not establish use in this production case.
+
+### 11 — Cross-tool Azure operational inspection automation
+
+**User-confirmed context and contribution (2026-10-16):** Azure services provided comprehensive native monitoring, but the operational rotation required a selected subset of information spread across multiple tools. Opening each tool's individual Monitor view made routine inspection time-consuming. The profile owner and two other engineers jointly developed automated checks: identified each tool's native API, retrieved the information needed for operational inspection, organized it into tables, and delivered the summaries through Email or Microsoft Teams.
+
+**Owner-recalled outcome:** Inspection time decreased from approximately **3 hours to 30 minutes**. This is a reduction of approximately **83%**, calculated as `(180 - 30) / 180`. The figure describes inspection time for the workflow, not incident recovery time or a measured reduction in incident frequency. Attribute the automation to the three-person team rather than sole ownership.
+
+**Candidate 104 wording (zh-TW):** 與另外兩位工程師共同開發 Azure 跨工具巡檢自動化，串接各工具原生 API，擷取值日生關注的監控資訊並彙整為表格，透過 Email／Microsoft Teams 集中通知，將巡檢時間由約 3 小時縮短至 30 分鐘，減少約 83%。
+
+**Candidate English wording:** Collaborated with two other engineers to automate operational checks across Azure tools, retrieving selected monitoring information through each tool's native API, consolidating it into tables, and delivering summaries via email or Microsoft Teams. Reduced inspection time from approximately 3 hours to 30 minutes (about 83%).
+
+**Keywords:** Azure, Native API Integration, Operational Automation, Production Monitoring, Monitoring Data Consolidation, Email, Microsoft Teams.
+
+**Evidence boundary:** Status `user_provided`, not independently verified. The implementation language, exact Azure services and APIs, execution schedule, hosting, authentication, notification transport, and individual task ownership have not been established. Do not infer Python, Azure Monitor API, Microsoft Graph, Webhooks, automated remediation, or replacement of native Azure monitoring. The timing is an owner-recalled comparison, not an independently benchmarked result; publication review applies before promotion to canonical resume data.
 
 ## Enterprise SDLC responsibilities (cross-cutting)
 
