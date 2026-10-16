@@ -40,7 +40,6 @@ def test_secret_cannot_be_allowlisted(tmp_path: Path) -> None:
         load_allowlist(allowlist)
 
 
-
 def test_doi_not_mistaken_for_taiwan_phone() -> None:
     sample = "Publication DOI 10.1038/s41598-019-40063-1; second author."
     assert not scan_text(sample, Path("publications.md"))
