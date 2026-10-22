@@ -22,11 +22,11 @@ summaries:
     last_reviewed: null
   - id: backend
     text:
-      zh-TW: 以 Python 建構可維護的 Backend 與自動化系統，關注 API 設計、資料整合、測試與 CI/CD。
-      en: Python engineer building maintainable backend and automation systems, with a focus on API design, data integration, testing, and CI/CD.
+      zh-TW: 具備 Python／Django REST API、Node.js 資料轉送與 AWS EC2 維運經驗；主導模組化重構，處理資料重複、回補與 API 批次整合。重視可維護性、測試與正式環境排錯。
+      en: Engineer with Python/Django REST API, Node.js data-forwarding and AWS EC2 operations experience. Led modular refactoring and worked on duplicate-data fixes, replay tools and API batching, with a focus on maintainability, testing and production troubleshooting.
     verification_status: user_provided
     evidence_url: null
-    last_reviewed: null
+    last_reviewed: 2026-10-22
   - id: data-engineering
     text:
       zh-TW: 聚焦資料管線、Spark／Delta Lake 與分析資料產品，重視可追溯性、品質檢查及可重現流程。
@@ -36,11 +36,11 @@ summaries:
     last_reviewed: null
   - id: cloud-platform
     text:
-      zh-TW: 橫跨 Cloud、CI/CD 與 Platform Engineering，將可觀測性、安全 gate 與維運需求納入交付流程。
-      en: Cloud and platform engineer incorporating observability, security gates, and operational requirements into delivery workflows.
+      zh-TW: 具備 Azure ADF／Databricks 資料管線與 AWS EC2 維運經驗，使用 SQL／PySpark 排查資料異常、驗證遷移及支援正式切換；參與跨工具 API 巡檢自動化，並設計 Python 設備與資源監控。
+      en: Engineer experienced in Azure ADF/Databricks pipelines and AWS EC2 operations, using SQL/PySpark for data troubleshooting, migration validation and production cutover support. Collaborated on cross-tool API inspection automation and designed Python device and resource monitoring.
     verification_status: user_provided
     evidence_url: null
-    last_reviewed: null
+    last_reviewed: 2026-10-22
   - id: data-analytics
     text:
       zh-TW: 結合資料分析、工程與研究方法，將原始資料整理為可驗證、可溝通的分析結果。

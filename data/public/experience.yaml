@@ -2,6 +2,167 @@
 # All dates use YYYY-MM, and verification_status=user_provided.
 # ITRI date remains unconfirmed and is documented separately for review.
 employment:
+
+# Reviewed qualitative cases only; restricted figures remain outside canonical data.
+
+  - id: wits-senior-software-engineer
+    employer: WITS
+    position: { zh-TW: 高級軟體工程師（派駐 Wiwynn 擔任雲端資料工程師）, en: Senior Software Engineer (assigned to Wiwynn as a Cloud Data Engineer) }
+    employment_type: employee
+    start_date: 2024-01
+    end_date: 2026-06
+    technologies: [Azure Data Factory, Azure Databricks, Python, PySpark, Spark SQL, T-SQL, Delta Lake, Azure Logic Apps, Azure API Management, Kafka]
+    verification_status: user_provided
+    bullets:
+      - id: wits-wiwynn-assignment
+        kind: responsibility
+        text:
+          zh-TW: 2024/01–2025/11 派駐 Wiwynn（緯穎），擔任雲端資料工程師。
+          en: Assigned to Wiwynn as a Cloud Data Engineer from January 2024 through November 2025.
+        verification_status: user_provided
+      - id: wits-parental-leave
+        kind: responsibility
+        text:
+          zh-TW: 2025/12–2026/05 育嬰留職停薪；2026/06 因組織異動結束任職。
+          en: Took parental leave from December 2025 through May 2026; employment ended in June 2026 following organizational changes.
+        verification_status: user_provided
+      - id: wiwynn-api-batching
+        kind: achievement
+        text:
+          zh-TW: 使用 Azure Logic Apps、API Management（APIM）與 SQL 維護跨系統資料同步，將逐筆 API 呼叫改為批次處理，減少請求負擔，並透過執行紀錄及 SQL 排查異常。
+          en: Maintained cross-system data synchronization with Azure Logic Apps, API Management (APIM) and SQL, replacing per-record API calls with batches to reduce request overhead and troubleshooting through run history and SQL.
+        relevance_tags: [backend-engineer, cloud-platform-engineer]
+        verification_status: user_provided
+        evidence_url: https://github.com/3pwei/wade-career-profile/blob/54e597e9a2f4105e6a6fc13940876bd33d3e6726/docs/career-review/wiwynn-consolidated-eight-cases.md
+        last_reviewed: 2026-10-22
+      - id: wiwynn-etl-operations
+        kind: responsibility
+        text:
+          zh-TW: 開發及維護 Azure Data Factory（ADF）／Databricks 資料管線，管理排程與相依流程；從 Monitor、日誌及上下游資料追查異常，透過 SQL／PySpark 修正、重跑與補載支援正式環境運作。
+          en: Developed and maintained Azure Data Factory (ADF)/Databricks pipelines, schedules and dependencies; investigated incidents through monitoring, logs and upstream/downstream data, supporting production with SQL/PySpark fixes, reruns and backfills.
+        relevance_tags: [backend-engineer, cloud-platform-engineer, data-engineer]
+        verification_status: user_provided
+        evidence_url: https://github.com/3pwei/wade-career-profile/blob/54e597e9a2f4105e6a6fc13940876bd33d3e6726/docs/career-review/wiwynn-consolidated-eight-cases.md
+        last_reviewed: 2026-10-22
+      - id: wiwynn-inspection-automation
+        kind: achievement
+        text:
+          zh-TW: 與其他工程師共同開發 Azure 跨工具巡檢自動化，串接各工具原生 API，將關注的監控資訊彙整為表格並透過 Email／Microsoft Teams 通知，集中原本分散的人工檢查。
+          en: Collaborated with other engineers to automate cross-tool Azure inspections, retrieving selected monitoring information through native APIs and consolidating tables for email/Microsoft Teams summaries to centralize previously scattered manual checks.
+        relevance_tags: [backend-engineer, cloud-platform-engineer]
+        verification_status: user_provided
+        evidence_url: https://github.com/3pwei/wade-career-profile/blob/54e597e9a2f4105e6a6fc13940876bd33d3e6726/docs/career-review/wiwynn-consolidated-eight-cases.md
+        last_reviewed: 2026-10-22
+      - id: wiwynn-kafka-ingestion
+        kind: responsibility
+        text:
+          zh-TW: 針對 Python Kafka Consumer 的記憶體與執行資源壓力，調整為批次消費訊息及批次寫入 Delta Table，處理大量訊息匯入時的卡頓問題。
+          en: Adjusted a Python Kafka consumer to consume messages and write Delta Tables in batches, addressing processing stalls under memory and execution-resource pressure during large-volume ingestion.
+        relevance_tags: [backend-engineer, cloud-platform-engineer, data-engineer]
+        verification_status: user_provided
+        evidence_url: https://github.com/3pwei/wade-career-profile/blob/54e597e9a2f4105e6a6fc13940876bd33d3e6726/docs/career-review/wiwynn-consolidated-eight-cases.md
+        last_reviewed: 2026-10-22
+      - id: wiwynn-databricks-migration
+        kind: responsibility
+        text:
+          zh-TW: 參與 Azure Synapse 至 Databricks 遷移，負責部分 T-SQL Stored Procedure 改寫為 Spark SQL／PySpark，核對筆數、商業鍵值、彙總與增量邏輯，並支援正式切換及上線後排錯。
+          en: Participated in migration from Azure Synapse to Databricks, rewriting part of the T-SQL stored-procedure logic in Spark SQL/PySpark, reconciling row counts, business keys, aggregates and incremental logic, and supporting production cutover and troubleshooting.
+        relevance_tags: [cloud-platform-engineer, data-engineer]
+        verification_status: user_provided
+        evidence_url: https://github.com/3pwei/wade-career-profile/blob/54e597e9a2f4105e6a6fc13940876bd33d3e6726/docs/career-review/wiwynn-consolidated-eight-cases.md
+        last_reviewed: 2026-10-22
+      - id: wiwynn-data-validation
+        kind: responsibility
+        text:
+          zh-TW: 設計資料整合 SIT／UAT 測試情境，以 SQL／Python／PySpark 核對來源與目標資料；針對 Power BI 數字錯誤、缺漏或未更新，追查 Delta Table、排程與管線狀態並修正上游邏輯。
+          en: Designed data-integration SIT/UAT scenarios with SQL/Python/PySpark source-to-target checks; investigated incorrect, missing or stale Power BI data through Delta Tables, schedules and pipeline status, and corrected upstream processing logic.
+        relevance_tags: [cloud-platform-engineer, data-engineer, data-analyst]
+        verification_status: user_provided
+        evidence_url: https://github.com/3pwei/wade-career-profile/blob/54e597e9a2f4105e6a6fc13940876bd33d3e6726/docs/career-review/wiwynn-consolidated-eight-cases.md
+        last_reviewed: 2026-10-22
+
+  - id: ensense-cloud-engineer
+    employer: EnSense
+    position: { zh-TW: 雲端工程師, en: Cloud Engineer }
+    employment_type: employee
+    start_date: 2022-06
+    end_date: 2024-01
+    technologies: [Python, Node.js, Django REST Framework, MongoDB, AWS EC2, AWS S3, MQTT, Nginx, Git, Shell]
+    verification_status: user_provided
+    bullets:
+      - id: ensense-forwarder-refactoring
+        kind: achievement
+        text:
+          zh-TW: 主導 Node.js 資料轉送程式模組化，親自設計共用核心、JSON 設定與 Shell 產生工具，同事協作部分模組；各專案維持獨立程序，減少重複程式並分批導入既有服務。
+          en: Led modular refactoring of Node.js data forwarders, personally designing the shared core, JSON configuration and Shell generator while teammates contributed modules; retained separate project processes and rolled out the design incrementally to reduce duplicated code.
+        relevance_tags: [backend-engineer, cloud-platform-engineer]
+        verification_status: user_provided
+        evidence_url: https://github.com/3pwei/wade-career-profile/blob/54e597e9a2f4105e6a6fc13940876bd33d3e6726/docs/career-review/ensense-engineering-cases.md
+        last_reviewed: 2026-10-22
+      - id: ensense-django-api
+        kind: responsibility
+        text:
+          zh-TW: 參與 Python／Django REST Framework 歷史資料查詢與 CSV／Excel 匯出 API 開發，依設備及時間區間查詢 MongoDB，處理時區、欄位格式與錯誤回應；以 Postman 驗證權限及匯出結果。
+          en: Contributed historical-query and CSV/Excel export APIs in Python and Django REST Framework, querying MongoDB by device and time range, handling time zones, field formatting and errors, and checking permissions and exported results with Postman.
+        relevance_tags: [backend-engineer]
+        verification_status: user_provided
+        evidence_url: https://github.com/3pwei/wade-career-profile/blob/54e597e9a2f4105e6a6fc13940876bd33d3e6726/docs/career-review/ensense-engineering-cases.md
+        last_reviewed: 2026-10-22
+      - id: ensense-time-boundary-fix
+        kind: achievement
+        text:
+          zh-TW: 重現並定位整點資料重複轉送的時間區間邊界問題，改為含起點、不含終點的查詢，測試相鄰區間的筆數與時間戳後上線修正。
+          en: Reproduced and isolated duplicate forwarding at hourly boundaries, changed queries to include the start and exclude the end, and checked adjacent-window record counts and timestamps before deploying the fix.
+        relevance_tags: [backend-engineer, data-engineer]
+        verification_status: user_provided
+        evidence_url: https://github.com/3pwei/wade-career-profile/blob/54e597e9a2f4105e6a6fc13940876bd33d3e6726/docs/career-review/ensense-engineering-cases.md
+        last_reviewed: 2026-10-22
+      - id: ensense-data-replay
+        kind: responsibility
+        text:
+          zh-TW: 建立沿用共用轉換與傳輸模組的資料回補工具，支援指定時間區間、缺漏補送與多程序批次處理，記錄 HTTPS／MQTT 傳送失敗供後續補送，並提供 CSV 備援交付。
+          en: Built a replay tool reusing shared transformation and delivery modules, supporting time-window or missing-data replay and multi-process batches; recorded HTTPS/MQTT failures for subsequent replay and provided CSV fallback delivery.
+        relevance_tags: [backend-engineer, data-engineer]
+        verification_status: user_provided
+        evidence_url: https://github.com/3pwei/wade-career-profile/blob/54e597e9a2f4105e6a6fc13940876bd33d3e6726/docs/career-review/ensense-engineering-cases.md
+        last_reviewed: 2026-10-22
+      - id: ensense-python-monitoring
+        kind: responsibility
+        text:
+          zh-TW: 設計於 AWS EC2／Cron 執行的 Python 監控，檢查設備資料完整率與 CPU、記憶體、磁碟資源，將結果留存 Google Sheets，透過 LINE／Email 通知異常並避免同日重複寄送斷線通知。
+          en: Designed Python checks running on AWS EC2 with Cron for sensor-data completeness, CPU, memory and disk usage; retained results in Google Sheets and sent LINE/email alerts while suppressing repeated disconnection emails within a day.
+        relevance_tags: [cloud-platform-engineer, data-engineer]
+        verification_status: user_provided
+        evidence_url: https://github.com/3pwei/wade-career-profile/blob/54e597e9a2f4105e6a6fc13940876bd33d3e6726/docs/career-review/ensense-engineering-cases.md
+        last_reviewed: 2026-10-22
+      - id: ensense-ec2-delivery
+        kind: responsibility
+        text:
+          zh-TW: 負責 Git Code Review、合併與 AWS EC2 發版，使用 Shell、SSH、systemd 手動部署及重啟服務，檢查程序、日誌與傳輸結果，必要時還原程式或設定並驗證恢復。
+          en: Handled Git code review, merges and AWS EC2 releases using Shell, SSH and systemd for manual deployment and restarts; checked processes, logs and delivery results, and restored code or configuration with recovery checks when needed.
+        relevance_tags: [backend-engineer, cloud-platform-engineer]
+        verification_status: user_provided
+        evidence_url: https://github.com/3pwei/wade-career-profile/blob/54e597e9a2f4105e6a6fc13940876bd33d3e6726/docs/career-review/ensense-engineering-cases.md
+        last_reviewed: 2026-10-22
+      - id: ensense-data-quality
+        kind: responsibility
+        text:
+          zh-TW: 使用 Python／Pandas 分析資料缺漏、離群值與感測器偏差，統一時區及量測單位，比對小時平均值、R² 與 Bias，檢查驗收分析結果並追查時間對齊或公式問題。
+          en: Used Python and Pandas to investigate missing data, outliers and sensor bias, normalize time zones and units, compare hourly averages, R-squared and Bias, and review acceptance analyses for time-alignment or formula errors.
+        relevance_tags: [cloud-platform-engineer, data-engineer, data-analyst]
+        verification_status: user_provided
+        evidence_url: https://github.com/3pwei/wade-career-profile/blob/54e597e9a2f4105e6a6fc13940876bd33d3e6726/docs/career-review/ensense-engineering-cases.md
+        last_reviewed: 2026-10-22
+
+  - id: sinica-research-assistant
+    employer: Academia Sinica
+    position: { zh-TW: 研究助理, en: Research Assistant }
+    employment_type: employee
+    start_date: 2017-02
+    end_date: 2022-06
+    verification_status: user_provided
+    bullets: []
+
   - id: ntu-research-assistant
     employer: National Taiwan University
     position: { zh-TW: 研究助理, en: Research Assistant }
@@ -30,43 +191,4 @@ employment:
         text:
           zh-TW: 協助科技部研究計畫書撰寫與計畫經費核銷等行政作業。
           en: Supported Ministry of Science and Technology research proposal writing and project expense administration.
-        verification_status: user_provided
-
-  - id: sinica-research-assistant
-    employer: Academia Sinica
-    position: { zh-TW: 研究助理, en: Research Assistant }
-    employment_type: employee
-    start_date: 2017-02
-    end_date: 2022-06
-    verification_status: user_provided
-    bullets: []
-
-  - id: ensense-cloud-engineer
-    employer: EnSense
-    position: { zh-TW: 雲端工程師, en: Cloud Engineer }
-    employment_type: employee
-    start_date: 2022-06
-    end_date: 2024-01
-    verification_status: user_provided
-    bullets: []
-
-  - id: wits-senior-software-engineer
-    employer: WITS
-    position: { zh-TW: 高級軟體工程師（派駐 Wiwynn 擔任雲端資料工程師）, en: Senior Software Engineer (assigned to Wiwynn as a Cloud Data Engineer) }
-    employment_type: employee
-    start_date: 2024-01
-    end_date: 2026-06
-    verification_status: user_provided
-    bullets:
-      - id: wits-wiwynn-assignment
-        kind: responsibility
-        text:
-          zh-TW: 2024/01–2025/11 派駐 Wiwynn（緯穎），擔任雲端資料工程師。
-          en: Assigned to Wiwynn as a Cloud Data Engineer from January 2024 through November 2025.
-        verification_status: user_provided
-      - id: wits-parental-leave
-        kind: responsibility
-        text:
-          zh-TW: 2025/12–2026/05 育嬰留職停薪；2026/06 因組織異動結束任職。
-          en: Took parental leave from December 2025 through May 2026; employment ended in June 2026 following organizational changes.
         verification_status: user_provided
