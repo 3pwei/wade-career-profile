@@ -35,12 +35,21 @@ jobs:
           uv run career check-privacy
       - name: Build synthetic Markdown and HTML
         run: |
-          uv run career build --profile general --lang en --format markdown --data-dir examples/sample-profile.yaml --output-dir dist-ci
-          uv run career build --profile general --lang zh-TW --format markdown --data-dir examples/sample-profile.yaml --output-dir dist-ci
-          uv run career build --profile general --lang en --format html --data-dir examples/sample-profile.yaml --output-dir dist-ci
-          uv run career build --profile general --lang zh-TW --format html --data-dir examples/sample-profile.yaml --output-dir dist-ci
+          uv run career build --profile general --lang en --format markdown --data-dir examples/sample-profile.yaml --config-dir examples/configs --output-dir dist-ci
+          uv run career build --profile general --lang zh-TW --format markdown --data-dir examples/sample-profile.yaml --config-dir examples/configs --output-dir dist-ci
+          uv run career build --profile general --lang en --format html --data-dir examples/sample-profile.yaml --config-dir examples/configs --output-dir dist-ci
+          uv run career build --profile general --lang zh-TW --format html --data-dir examples/sample-profile.yaml --config-dir examples/configs --output-dir dist-ci
       - name: Build real resume profiles (Markdown and HTML)
         run: |
           uv run career build-all --no-pdf --output-dir dist-ci-real
           test "$(find dist-ci-real -type f -name '*.md' | wc -l)" -eq 10
           test "$(find dist-ci-real -type f -name '*.html' | wc -l)" -eq 10
+          uv run python - <<'PY_CHECK'
+          from pathlib import Path
+          for path in Path("dist-ci-real").rglob("*"):
+              if path.suffix not in {".md", ".html"}:
+                  continue
+              content = path.read_text()
+              for employer in ("WITS", "EnSense", "Academia Sinica", "National Taiwan University"):
+                  assert employer in content, f"{path}: missing {employer}"
+          PY_CHECK
