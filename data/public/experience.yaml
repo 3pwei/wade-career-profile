@@ -1,72 +1,344 @@
-# Career timeline — owner-confirmed, not independently verified
-# All dates use YYYY-MM, and verification_status=user_provided.
-# ITRI date remains unconfirmed and is documented separately for review.
+# Owner-confirmed career data; claims remain user_provided, not independently verified.
 employment:
-  - id: ntu-research-assistant
-    employer: National Taiwan University
-    position: { zh-TW: 研究助理, en: Research Assistant }
-    employment_type: employee
-    start_date: 2016-06
-    end_date: 2016-12
-    technologies: [Python 2.7, ArcPy, ArcGIS, Shapefile, EPA SWMM]
+- id: wits-senior-software-engineer
+  employer: WITS
+  position:
+    zh-TW: 高級軟體工程師（派駐 Wiwynn 擔任雲端資料工程師）
+    en: Senior Software Engineer (assigned to Wiwynn as a Cloud Data Engineer)
+  employment_type: employee
+  start_date: 2024-01
+  end_date: 2026-06
+  verification_status: user_provided
+  bullets:
+  - id: wits-wiwynn-assignment
+    kind: responsibility
+    text:
+      zh-TW: 2024/01–2025/11 派駐 Wiwynn（緯穎），擔任雲端資料工程師。
+      en: Assigned to Wiwynn as a Cloud Data Engineer from January 2024 through November 2025.
     verification_status: user_provided
-    bullets:
-      - id: ntu-gis-automation
-        kind: responsibility
-        text:
-          zh-TW: 使用 Python 2.7 與 ArcPy 自動處理臺北市下水道 GIS 圖資（.shp），擷取資料並轉換為 EPA SWMM 模型輸入檔（.inp）。
-          en: Used Python 2.7 and ArcPy to automate processing of Taipei sewer GIS shapefiles and convert extracted data into EPA SWMM input files (.inp).
-        relevance_tags: [data-engineer, data-analyst]
-        verification_status: user_provided
-      - id: ntu-swmm-analysis
-        kind: responsibility
-        text:
-          zh-TW: 分析 SWMM 模擬的節點淹水量、管線流量、水位及降雨逕流量，並製作 GIF 動畫呈現模擬變化。
-          en: Analyzed SWMM outputs including node flooding, conduit flow, water level, and rainfall runoff, and created GIF animations of simulation results.
-        relevance_tags: [data-analyst]
-        verification_status: user_provided
-      - id: ntu-research-support
-        kind: responsibility
-        text:
-          zh-TW: 協助科技部研究計畫書撰寫與計畫經費核銷等行政作業。
-          en: Supported Ministry of Science and Technology research proposal writing and project expense administration.
-        verification_status: user_provided
-
-  - id: sinica-research-assistant
-    employer: Academia Sinica
-    position: { zh-TW: 研究助理, en: Research Assistant }
-    employment_type: employee
-    start_date: 2017-02
-    end_date: 2022-06
+  - id: wits-parental-leave
+    kind: responsibility
+    text:
+      zh-TW: 2025/12–2026/05 育嬰留職停薪；2026/06 因組織異動結束任職。
+      en: Took parental leave from December 2025 through May 2026; employment ended in June 2026 following organizational
+        changes.
     verification_status: user_provided
-    bullets: []
-
-  - id: ensense-cloud-engineer
-    employer: EnSense
-    position: { zh-TW: 雲端工程師, en: Cloud Engineer }
-    employment_type: employee
-    start_date: 2022-06
-    end_date: 2024-01
+  - id: wiwynn-api-batching
+    kind: responsibility
+    text:
+      zh-TW: 使用 Azure Logic Apps、APIM 與 SQL 維護跨系統同步，將逐筆 API 呼叫改為每批最多 1,000 筆的批次處理，降低大量同步的請求負擔。
+      en: Maintained cross-system synchronization with Azure Logic Apps, APIM and SQL, replacing per-record API
+        calls with batches of up to 1,000 records to reduce request overhead.
     verification_status: user_provided
-    bullets: []
-
-  - id: wits-senior-software-engineer
-    employer: WITS
-    position: { zh-TW: 高級軟體工程師（派駐 Wiwynn 擔任雲端資料工程師）, en: Senior Software Engineer (assigned to Wiwynn as a Cloud Data Engineer) }
-    employment_type: employee
-    start_date: 2024-01
-    end_date: 2026-06
+    last_reviewed: '2026-10-22'
+  - id: wiwynn-delta-performance
+    kind: responsibility
+    text:
+      zh-TW: 使用 Azure Databricks／PySpark 與 Delta Lake Time Travel 固定來源 Snapshot（versionAsOf／timestampAsOf），改善 Delta
+        Table 資料處理與寫入流程。
+      en: Used Azure Databricks/PySpark and Delta Lake Time Travel to pin source snapshots with versionAsOf/timestampAsOf
+        and improve Delta Table processing and write workflows.
     verification_status: user_provided
-    bullets:
-      - id: wits-wiwynn-assignment
-        kind: responsibility
-        text:
-          zh-TW: 2024/01–2025/11 派駐 Wiwynn（緯穎），擔任雲端資料工程師。
-          en: Assigned to Wiwynn as a Cloud Data Engineer from January 2024 through November 2025.
-        verification_status: user_provided
-      - id: wits-parental-leave
-        kind: responsibility
-        text:
-          zh-TW: 2025/12–2026/05 育嬰留職停薪；2026/06 因組織異動結束任職。
-          en: Took parental leave from December 2025 through May 2026; employment ended in June 2026 following organizational changes.
-        verification_status: user_provided
+    last_reviewed: '2026-10-22'
+  - id: wiwynn-migration
+    kind: responsibility
+    text:
+      zh-TW: 參與 Azure Synapse ETL／Stored Procedure 移轉至 Databricks，負責部分 Spark SQL／PySpark 改寫、Row Count／Key／彙總及增量邏輯驗證，支援
+        Production Cutover。
+      en: Contributed to Azure Synapse ETL/stored-procedure migration to Databricks, rewriting selected Spark SQL/PySpark
+        logic, validating row counts, keys, aggregates and incremental processing, and supporting production cutover.
+    verification_status: user_provided
+    last_reviewed: '2026-10-22'
+  - id: wiwynn-production-rca
+    kind: responsibility
+    text:
+      zh-TW: 開發維護 ADF／Databricks ETL，使用 Monitor、Log、SQL／PySpark 追查 Production 異常根因，執行 Pipeline 重跑、指定區間補載及上下游資料驗證。
+      en: Developed and maintained ADF/Databricks ETL, investigated production root causes with monitoring, logs
+        and SQL/PySpark, and performed pipeline reruns, selective backfills and upstream/downstream validation.
+    verification_status: user_provided
+    last_reviewed: '2026-10-22'
+  - id: wiwynn-data-quality
+    kind: responsibility
+    text:
+      zh-TW: 設計 SIT／UAT 測試情境，以參數化 SQL／Python／PySpark 比對來源及目標筆數、Key 與欄位，整合至 ADF／Databricks 流程並配合人工審查與修正。
+      en: Designed SIT/UAT scenarios and parameterized SQL/Python/PySpark checks for source-to-target counts, keys
+        and fields, integrating validation into ADF/Databricks workflows with human review and remediation.
+    verification_status: user_provided
+    last_reviewed: '2026-10-22'
+  - id: wiwynn-logging-poc
+    kind: responsibility
+    text:
+      zh-TW: 主動將既有 Databricks Python Logging Functions 重構為 Class，封裝初始化與設定，完成共用 Logging Library PoC 並向主管展示；未導入 Production。
+      en: Refactored existing Databricks Python logging functions into a class encapsulating initialization/configuration
+        and demonstrated a shared logging-library PoC to the supervisor; not deployed to production.
+    verification_status: user_provided
+    last_reviewed: '2026-10-22'
+  - id: wiwynn-qms-coordination
+    kind: responsibility
+    text:
+      zh-TW: 擔任 QMS 資料整合技術協作窗口，與 PM 釐清需求與商業規則、提出時程、追蹤開發進度，說明 SQL／ETL 邏輯並支援驗證與交接。
+      en: Acted as a technical coordination contact for QMS data integration, clarifying requirements and business
+        rules with the PM, proposing schedules, tracking development and supporting SQL/ETL explanations, validation
+        and handover.
+    verification_status: user_provided
+    last_reviewed: '2026-10-22'
+  - id: wiwynn-kafka-batch
+    kind: responsibility
+    text:
+      zh-TW: 針對 Python Kafka Consumer 的記憶體與執行資源壓力，改採每批最多 1,000 筆訊息並批次寫入 Delta Table，改善大量資料匯入卡頓。
+      en: Addressed memory and execution-resource pressure in a Python Kafka consumer by consuming up to 1,000 messages
+        per batch and batch-writing to Delta Tables to improve stalled ingestion workflows.
+    verification_status: user_provided
+    last_reviewed: '2026-10-22'
+  - id: wiwynn-bi-troubleshooting
+    kind: responsibility
+    text:
+      zh-TW: 協助 Power BI 資料串接，查詢 Delta Table、以 SQL 比對報表與來源資料、檢查 ADF／Databricks 排程及更新時間，修正上游 SQL／PySpark 資料異常。
+      en: Supported Power BI data integration; queried Delta Tables, reconciled reports against source data with
+        SQL, checked ADF/Databricks schedules and freshness, and corrected upstream SQL/PySpark data issues.
+    verification_status: user_provided
+    last_reviewed: '2026-10-22'
+  - id: wiwynn-duty-automation
+    kind: responsibility
+    text:
+      zh-TW: 與另外兩位工程師共同開發 Azure 跨工具巡檢自動化，串接原生 API 彙整監控資訊並以 Email／Teams 通知，巡檢時間由約 3 小時縮短至 30 分鐘，減少約 83%。
+      en: Collaborated with two other engineers to automate cross-tool Azure inspections, consolidating monitoring
+        data through native APIs and email/Teams summaries; reduced inspection time from approximately 3 hours to
+        30 minutes (about 83%).
+    verification_status: user_provided
+    last_reviewed: '2026-10-22'
+  - id: wiwynn-sdlc
+    kind: responsibility
+    text:
+      zh-TW: 參與 SA、SD、DEV、UT、SIT、UAT、QAS、MTP 流程，在需要系統分析的專案主導需求分析，並負責設計、開發、測試驗證、正式上線與交接。
+      en: Participated across SA, SD, DEV, UT, SIT, UAT, QAS and MTP, leading requirements analysis when needed
+        and contributing design, development, testing, production rollout and handover.
+    verification_status: user_provided
+    last_reviewed: '2026-10-22'
+  technologies:
+  - Azure Data Factory
+  - Azure Databricks
+  - PySpark
+  - Spark SQL
+  - T-SQL
+  - Delta Lake
+  - Azure Logic Apps
+  - APIM
+  - Kafka
+  - Power BI
+- id: ensense-cloud-engineer
+  employer: EnSense
+  position:
+    zh-TW: 雲端工程師
+    en: Cloud Engineer
+  employment_type: employee
+  start_date: 2022-06
+  end_date: 2024-01
+  verification_status: user_provided
+  bullets:
+  - id: ensense-forwarder-refactor
+    kind: responsibility
+    text:
+      zh-TW: 主導 Node.js Forwarder 重構，設計共用模組、JSON 設定與 Shell Generator；原逾 5,000 行程式改為主程式及共用模組合計少於 500 行，設定完成後數分鐘可產生專案程式。
+      en: Led Node.js Forwarder refactoring with shared modules, JSON configuration and a Shell generator; replaced
+        inherited code exceeding 5,000 lines with a shared main program and modules totaling fewer than 500 lines,
+        generating project code within minutes after configuration.
+    verification_status: user_provided
+    last_reviewed: '2026-10-22'
+  - id: ensense-monitoring
+    kind: responsibility
+    text:
+      zh-TW: 以 Python／EC2 Cron 監控約 40 個專案、逾 1,000 台設備的資料完整率及主機資源，透過 Google Sheets、LINE／Email 彙整告警，人工巡檢由約半天縮短至 30
+        分鐘。
+      en: Built Python/EC2 Cron checks for data completeness and host resources across approximately 40 projects
+        and over 1,000 devices, using Google Sheets and LINE/email alerts; reduced manual inspection from approximately
+        half a day to 30 minutes.
+    verification_status: user_provided
+    last_reviewed: '2026-10-22'
+  - id: ensense-replay
+    kind: responsibility
+    text:
+      zh-TW: 開發可依時間區間執行完整或缺失資料回補的工具，重用校正及傳輸模組，支援批次切分、多 Process 平行處理、失敗記錄與後續重送，並提供 CSV 備援交付。
+      en: Developed time-window recovery tools for full or missing-only replay, reusing calibration and delivery
+        modules with batching, multiprocess execution, failure logging and subsequent replay, plus CSV handoff.
+    verification_status: user_provided
+    last_reviewed: '2026-10-22'
+  - id: ensense-boundary-rca
+    kind: responsibility
+    text:
+      zh-TW: 透過原始資料、Log、Payload 與時間戳比對重現整點重複轉拋，將時間區間改為左閉右開 [start,end)，完成邊界測試並部署修正。
+      en: Reproduced duplicate forwarding at hour boundaries through source-data, log, payload and timestamp comparisons;
+        changed ranges to [start,end), tested boundary cases and deployed the fix.
+    verification_status: user_provided
+    last_reviewed: '2026-10-22'
+  - id: ensense-calibration
+    kind: responsibility
+    text:
+      zh-TW: 以 Python／scikit-learn 研究 O₃ 日變化校正，結合日照週期、溫濕度及多項式特徵，跨日期與設備比對 Bias 和趨勢，經審查後整合至 Production Node.js Forwarder。
+      en: Developed O3 diurnal calibration with Python/scikit-learn using daylight cycles, temperature/humidity
+        and polynomial features; compared bias and trends across dates and devices and integrated the reviewed model
+        into production Node.js Forwarders.
+    verification_status: user_provided
+    last_reviewed: '2026-10-22'
+  - id: ensense-django-api
+    kind: responsibility
+    text:
+      zh-TW: 參與 Django REST Framework 資料服務，開發依設備與時間區間查詢歷史資料及 CSV／Excel 匯出 API，串接 MongoDB／S3，使用 Postman 與來源資料比對驗證。
+      en: Contributed to a Django REST Framework service, developing device/time-window historical-query and CSV/Excel
+        export APIs using MongoDB/S3; validated with Postman and source-data reconciliation.
+    verification_status: user_provided
+    last_reviewed: '2026-10-22'
+  - id: ensense-acceptance-analysis
+    kind: responsibility
+    text:
+      zh-TW: 使用 Python 分析每月逾 20 個專案的感測器與參考站資料，檢查 R²、Bias、時間對齊及異常值；自動化報表流程將每案原人工準備 60–90 分鐘轉為約 15 分鐘結果審查。
+      en: Analyzed sensor and reference-station data for over 20 projects per month, reviewing R², bias, time alignment
+        and outliers; the automated reporting workflow replaced 60–90 minutes of manual preparation per project
+        with approximately 15 minutes of result review.
+    verification_status: user_provided
+    last_reviewed: '2026-10-22'
+  - id: ensense-deployment
+    kind: responsibility
+    text:
+      zh-TW: 負責 Git Code Review／Merge、Shell 部署腳本與 EC2 上的 SSH／Git／systemd 發版，檢查 Log、資料與 HTTPS／MQTT 傳輸，保留舊版程式及設定供回復。
+      en: Handled Git code reviews/merges, Shell deployment scripts and EC2 releases through SSH, Git and systemd;
+        verified logs, data and HTTPS/MQTT delivery and retained prior code/configuration for rollback.
+    verification_status: user_provided
+    last_reviewed: '2026-10-22'
+  - id: ensense-team-lead
+    kind: responsibility
+    text:
+      zh-TW: 在雲端工程師職稱下持續帶領 1–2 位工程師，負責任務優先級、架構設計、Code Review、發版決策與時程估算，並參與年度績效評估。
+      en: While holding the Cloud Engineer title, continuously led 1–2 engineers, setting priorities, designing
+        architecture, reviewing code, deciding releases and estimating delivery schedules; participated in annual
+        performance reviews.
+    verification_status: user_provided
+    last_reviewed: '2026-10-22'
+  technologies:
+  - Node.js
+  - Python
+  - Django REST Framework
+  - AWS EC2
+  - AWS S3
+  - MongoDB
+  - HTTPS
+  - MQTT
+  - Google Sheets
+  - Git
+  - Shell
+  - systemd
+- id: sinica-research-assistant
+  employer: Academia Sinica
+  position:
+    zh-TW: 研究助理
+    en: Research Assistant
+  employment_type: employee
+  start_date: 2017-02
+  end_date: 2022-06
+  verification_status: user_provided
+  bullets:
+  - id: sinica-analysis
+    kind: responsibility
+    text:
+      zh-TW: 使用 Python、Pandas、NumPy、SciPy 分析氣候、森林生物量及土地利用資料，以 Matplotlib／Seaborn 製作研究圖表，並使用 Plotly 提供互動式探索。
+      en: Analyzed climate, forest biomass and land-use data with Python, Pandas, NumPy and SciPy; created research
+        figures with Matplotlib/Seaborn and interactive exploration with Plotly.
+    verification_status: user_provided
+    last_reviewed: '2026-10-22'
+  - id: sinica-forecast-pipeline
+    kind: responsibility
+    text:
+      zh-TW: 建立 Python／Shell／Cron／SCP 跨主機流程，每日處理 15 天 NetCDF 氣象預報、轉換模型輸入並交付模擬結果，加入 Logging、失敗重試及 Email 通知。
+      en: Built a cross-host Python/Shell/Cron/SCP workflow to process daily 15-day NetCDF forecasts, prepare model
+        inputs and deliver simulation outputs, with logging, retries and email alerts.
+    verification_status: user_provided
+    last_reviewed: '2026-10-22'
+  - id: sinica-land-cover
+    kind: responsibility
+    text:
+      zh-TW: 主要負責 Python GIS／Raster 批次處理及 1904–2015 年臺灣土地覆蓋變遷分析，參與歷史地圖數位化、座標校正及分類標準化。
+      en: Led Python GIS/raster batch processing and analysis of Taiwan land-cover changes from 1904 to 2015; contributed
+        to historical map digitization, georeferencing and classification standardization.
+    verification_status: user_provided
+    last_reviewed: '2026-10-22'
+  - id: sinica-land-use-algorithm
+    kind: responsibility
+    text:
+      zh-TW: 自行設計 Python 土地利用空間配置演算法，結合 3×3 鄰域權重、歷史轉換機率及政策限制，逐年推估未來約 100 年土地利用分布。
+      en: Designed a Python spatial land-use allocation algorithm combining 3×3 neighborhood weights, historical
+        transition probabilities and policy constraints to simulate annual distributions over approximately 100
+        years.
+    verification_status: user_provided
+    last_reviewed: '2026-10-22'
+  - id: sinica-biomass-model
+    kind: responsibility
+    text:
+      zh-TW: 修改 ORCHIDEE-CAN 的 Fortran 輸入輸出並於 Linux／HPC 執行模擬；整合 3,648 個森林觀測樣區、30m 樹冠高度與 5×5km 網格，進行生物量估算與模型驗證。
+      en: Modified Fortran input/output in ORCHIDEE-CAN and ran simulations on Linux/HPC; integrated 3,648 forest
+        observation plots, 30 m canopy-height data and 5×5 km grids for biomass estimation and model validation.
+    verification_status: user_provided
+    last_reviewed: '2026-10-22'
+  - id: sinica-collaboration
+    kind: responsibility
+    text:
+      zh-TW: 參與約三年的跨機構氣象與水文研究合作，負責資料整合、技術圖表、研究方法章節及技術問答，支援團隊期中與期末報告交付。
+      en: Contributed to approximately three years of inter-institutional weather and hydrology research through
+        data integration, technical figures, methods sections and technical discussions supporting team reports.
+    verification_status: user_provided
+    last_reviewed: '2026-10-22'
+  technologies:
+  - Python
+  - Pandas
+  - NumPy
+  - SciPy
+  - Matplotlib
+  - Seaborn
+  - Plotly
+  - Fortran
+  - Linux
+  - HPC
+  - NetCDF
+  - GIS
+  - Shell
+  - Cron
+- id: ntu-research-assistant
+  employer: National Taiwan University
+  position:
+    zh-TW: 研究助理
+    en: Research Assistant
+  employment_type: employee
+  start_date: 2016-06
+  end_date: 2016-12
+  technologies:
+  - Python 2.7
+  - ArcPy
+  - ArcGIS
+  - Shapefile
+  - EPA SWMM
+  verification_status: user_provided
+  bullets:
+  - id: ntu-gis-automation
+    kind: responsibility
+    text:
+      zh-TW: 使用 Python 2.7 與 ArcPy 自動處理臺北市下水道 GIS 圖資（.shp），擷取資料並轉換為 EPA SWMM 模型輸入檔（.inp）。
+      en: Used Python 2.7 and ArcPy to automate processing of Taipei sewer GIS shapefiles and convert extracted
+        data into EPA SWMM input files (.inp).
+    relevance_tags:
+    - data-engineer
+    - data-analyst
+    verification_status: user_provided
+  - id: ntu-swmm-analysis
+    kind: responsibility
+    text:
+      zh-TW: 分析 SWMM 模擬的節點淹水量、管線流量、水位及降雨逕流量，並製作 GIF 動畫呈現模擬變化。
+      en: Analyzed SWMM outputs including node flooding, conduit flow, water level, and rainfall runoff, and created
+        GIF animations of simulation results.
+    relevance_tags:
+    - data-analyst
+    verification_status: user_provided
+  - id: ntu-research-support
+    kind: responsibility
+    text:
+      zh-TW: 協助科技部研究計畫書撰寫與計畫經費核銷等行政作業。
+      en: Supported Ministry of Science and Technology research proposal writing and project expense administration.
+    verification_status: user_provided
