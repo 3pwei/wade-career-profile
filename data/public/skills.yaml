@@ -1,28 +1,37 @@
 skills:
-  - { id: python, name: Python, category: programming-languages, evidence_refs: [quant-trading-platform, manufacturing-intelligence, commerce-competitive-intelligence], verification_status: user_provided, evidence_url: null, last_reviewed: null }
-  - { id: sql, name: SQL, category: programming-languages, evidence_refs: [manufacturing-intelligence, commerce-competitive-intelligence], verification_status: user_provided, evidence_url: null, last_reviewed: null }
-  - { id: javascript-nodejs, name: JavaScript / Node.js, category: programming-languages, evidence_refs: [], verification_status: user_provided, evidence_url: null, last_reviewed: null }
-  - { id: bash, name: Bash, category: programming-languages, evidence_refs: [], verification_status: user_provided, evidence_url: null, last_reviewed: null }
+  - { id: python, name: Python, category: programming-languages, evidence_refs: [quant-trading-platform, manufacturing-intelligence, commerce-competitive-intelligence, ensense-django-api, ensense-python-monitoring, wiwynn-kafka-ingestion], verification_status: user_provided, evidence_url: null, last_reviewed: null }
+  - { id: sql, name: SQL, category: programming-languages, evidence_refs: [manufacturing-intelligence, commerce-competitive-intelligence, wiwynn-api-batching, wiwynn-etl-operations], verification_status: user_provided, evidence_url: null, last_reviewed: null }
+  - { id: javascript-nodejs, name: JavaScript / Node.js, category: programming-languages, evidence_refs: [ensense-forwarder-refactoring], verification_status: user_provided, evidence_url: null, last_reviewed: null }
+  - { id: bash, name: Bash, category: programming-languages, evidence_refs: [ensense-forwarder-refactoring, ensense-ec2-delivery], verification_status: user_provided, evidence_url: null, last_reviewed: null }
   - { id: fastapi, name: FastAPI, category: backend-engineering, evidence_refs: [quant-trading-platform], verification_status: user_provided, evidence_url: null, last_reviewed: null }
-  - { id: django, name: Django, category: backend-engineering, evidence_refs: [], verification_status: user_provided, evidence_url: null, last_reviewed: null }
-  - { id: rest-api, name: REST API, category: backend-engineering, evidence_refs: [quant-trading-platform], verification_status: user_provided, evidence_url: null, last_reviewed: null }
-  - { id: databricks, name: Azure Databricks, category: data-engineering, evidence_refs: [manufacturing-intelligence], verification_status: user_provided, evidence_url: null, last_reviewed: null }
-  - { id: spark, name: Apache Spark, category: data-engineering, evidence_refs: [manufacturing-intelligence], verification_status: user_provided, evidence_url: null, last_reviewed: null }
-  - { id: delta-lake, name: Delta Lake, category: data-engineering, evidence_refs: [manufacturing-intelligence], verification_status: user_provided, evidence_url: null, last_reviewed: null }
-  - { id: azure-data-factory, name: Azure Data Factory, category: data-engineering, evidence_refs: [], verification_status: user_provided, evidence_url: null, last_reviewed: null }
-  - { id: azure, name: Azure, category: cloud-platforms, evidence_refs: [], verification_status: user_provided, evidence_url: null, last_reviewed: null }
-  - { id: aws, name: AWS, category: cloud-platforms, evidence_refs: [manufacturing-intelligence], verification_status: user_provided, evidence_url: null, last_reviewed: null }
+  - { id: django, name: Django, category: backend-engineering, evidence_refs: [ensense-django-api], verification_status: user_provided, evidence_url: null, last_reviewed: null }
+  - { id: rest-api, name: REST API, category: backend-engineering, evidence_refs: [quant-trading-platform, ensense-django-api], verification_status: user_provided, evidence_url: null, last_reviewed: null }
+  - { id: databricks, name: Azure Databricks, category: data-engineering, evidence_refs: [manufacturing-intelligence, wiwynn-etl-operations, wiwynn-databricks-migration], verification_status: user_provided, evidence_url: null, last_reviewed: null }
+  - { id: spark, name: Apache Spark, category: data-engineering, evidence_refs: [manufacturing-intelligence, wiwynn-databricks-migration], verification_status: user_provided, evidence_url: null, last_reviewed: null }
+  - { id: delta-lake, name: Delta Lake, category: data-engineering, evidence_refs: [manufacturing-intelligence, wiwynn-kafka-ingestion, wiwynn-data-validation], verification_status: user_provided, evidence_url: null, last_reviewed: null }
+  - { id: azure-data-factory, name: Azure Data Factory, category: data-engineering, evidence_refs: [wiwynn-etl-operations], verification_status: user_provided, evidence_url: null, last_reviewed: null }
+  - { id: azure, name: Azure, category: cloud-platforms, evidence_refs: [wiwynn-inspection-automation, wiwynn-etl-operations], verification_status: user_provided, evidence_url: null, last_reviewed: null }
+  - { id: aws, name: AWS, category: cloud-platforms, evidence_refs: [manufacturing-intelligence, ensense-python-monitoring, ensense-ec2-delivery], verification_status: user_provided, evidence_url: null, last_reviewed: null }
   - { id: cloudflare, name: Cloudflare, category: cloud-platforms, evidence_refs: [quant-trading-platform], verification_status: user_provided, evidence_url: null, last_reviewed: null }
   - { id: docker, name: Docker, category: devops-ci-cd, evidence_refs: [quant-trading-platform], verification_status: user_provided, evidence_url: null, last_reviewed: null }
-  - { id: git, name: Git, category: devops-ci-cd, evidence_refs: [], verification_status: user_provided, evidence_url: null, last_reviewed: null }
+  - { id: git, name: Git, category: devops-ci-cd, evidence_refs: [ensense-ec2-delivery], verification_status: user_provided, evidence_url: null, last_reviewed: null }
   - { id: ci-cd, name: CI/CD, category: devops-ci-cd, evidence_refs: [quant-trading-platform], verification_status: user_provided, evidence_url: null, last_reviewed: null }
-  - { id: linux, name: Linux, category: devops-ci-cd, evidence_refs: [], verification_status: user_provided, evidence_url: null, last_reviewed: null }
+  - { id: linux, name: Linux, category: devops-ci-cd, evidence_refs: [ensense-ec2-delivery], verification_status: user_provided, evidence_url: null, last_reviewed: null }
   - { id: sql-server, name: SQL Server, category: databases, evidence_refs: [], verification_status: user_provided, evidence_url: null, last_reviewed: null }
   - { id: mysql, name: MySQL, category: databases, evidence_refs: [], verification_status: user_provided, evidence_url: null, last_reviewed: null }
-  - { id: mongodb, name: MongoDB, category: databases, evidence_refs: [], verification_status: user_provided, evidence_url: null, last_reviewed: null }
+  - { id: mongodb, name: MongoDB, category: databases, evidence_refs: [ensense-django-api], verification_status: user_provided, evidence_url: null, last_reviewed: null }
   - { id: tableau, name: Tableau, category: data-analytics, evidence_refs: [manufacturing-intelligence], verification_status: user_provided, evidence_url: null, last_reviewed: null }
   - { id: n8n, name: n8n, category: automation, evidence_refs: [commerce-competitive-intelligence], verification_status: user_provided, evidence_url: null, last_reviewed: null }
-  - { id: python-automation, name: Python automation, category: automation, evidence_refs: [commerce-competitive-intelligence], verification_status: user_provided, evidence_url: null, last_reviewed: null }
-  - { id: operational-monitoring, name: Operational monitoring, category: monitoring-reliability, evidence_refs: [quant-trading-platform], verification_status: user_provided, evidence_url: null, last_reviewed: null }
+  - { id: python-automation, name: Python automation, category: automation, evidence_refs: [commerce-competitive-intelligence, ensense-python-monitoring], verification_status: user_provided, evidence_url: null, last_reviewed: null }
+  - { id: operational-monitoring, name: Operational monitoring, category: monitoring-reliability, evidence_refs: [quant-trading-platform, wiwynn-inspection-automation, ensense-python-monitoring], verification_status: user_provided, evidence_url: null, last_reviewed: null }
   - { id: technical-research, name: Technical research, category: other-relevant-skills, evidence_refs: [], verification_status: user_provided, evidence_url: null, last_reviewed: null }
   - { id: project-management, name: Project management, category: other-relevant-skills, evidence_refs: [], verification_status: user_provided, evidence_url: null, last_reviewed: null }
+  - { id: django-rest-framework, name: Django REST Framework, category: backend-engineering, evidence_refs: [ensense-django-api], verification_status: user_provided, last_reviewed: '2026-10-22' }
+  - { id: mqtt, name: MQTT, category: backend-engineering, evidence_refs: [ensense-data-replay], verification_status: user_provided, last_reviewed: '2026-10-22' }
+  - { id: aws-ec2, name: AWS EC2, category: cloud-platforms, evidence_refs: [ensense-ec2-delivery], verification_status: user_provided, last_reviewed: '2026-10-22' }
+  - { id: aws-s3, name: AWS S3, category: cloud-platforms, evidence_refs: [ensense-forwarder-refactoring], verification_status: user_provided, last_reviewed: '2026-10-22' }
+  - { id: pyspark, name: PySpark, category: data-engineering, evidence_refs: [wiwynn-etl-operations], verification_status: user_provided, last_reviewed: '2026-10-22' }
+  - { id: spark-sql, name: Spark SQL / T-SQL, category: data-engineering, evidence_refs: [wiwynn-databricks-migration], verification_status: user_provided, last_reviewed: '2026-10-22' }
+  - { id: kafka, name: Apache Kafka, category: data-engineering, evidence_refs: [wiwynn-kafka-ingestion], verification_status: user_provided, last_reviewed: '2026-10-22' }
+  - { id: data-validation, name: Data validation / SIT / UAT, category: data-engineering, evidence_refs: [wiwynn-data-validation], verification_status: user_provided, last_reviewed: '2026-10-22' }
+  - { id: production-troubleshooting, name: Production troubleshooting, category: monitoring-reliability, evidence_refs: [wiwynn-etl-operations, ensense-time-boundary-fix], verification_status: user_provided, last_reviewed: '2026-10-22' }

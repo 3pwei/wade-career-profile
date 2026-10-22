@@ -1,12 +1,16 @@
 id: cloud-platform-engineer
 headline:
-  zh-TW: Cloud / Platform Engineer
-  en: Cloud / Platform Engineer
+  zh-TW: 雲端／資料平台工程師｜Azure / AWS / Databricks
+  en: Cloud / Data Platform Engineer | Azure / AWS / Databricks
 summary_id: cloud-platform
-skill_category_order: [cloud-platforms, devops-ci-cd, monitoring-reliability, programming-languages, backend-engineering, data-engineering, databases, automation]
-project_ids: [quant-trading-platform, manufacturing-intelligence, commerce-competitive-intelligence]
+skill_category_order: [cloud-platforms, data-engineering, monitoring-reliability, programming-languages, databases, devops-ci-cd, automation]
+project_ids: [manufacturing-intelligence, quant-trading-platform]
 achievement_ids: []
-experience_bullets: {}
-section_order: [summary, skills, projects, experience, achievements, education]
+experience_bullets:
+  wits-senior-software-engineer: [wits-wiwynn-assignment, wiwynn-etl-operations, wiwynn-inspection-automation, wiwynn-databricks-migration, wiwynn-data-validation]
+  ensense-cloud-engineer: [ensense-python-monitoring, ensense-ec2-delivery, ensense-forwarder-refactoring, ensense-data-quality]
+  sinica-research-assistant: []
+  ntu-research-assistant: [ntu-gis-automation]
+section_order: [summary, experience, skills, projects, achievements, education]
 sections: { experience: true, education: true, skills: true, projects: true, achievements: true }
 allowed_verification_statuses: [verified, user_provided]

@@ -1,12 +1,16 @@
 id: backend-engineer
 headline:
-  zh-TW: Python Backend Engineer
-  en: Python Backend Engineer
+  zh-TW: 後端工程師｜Python / Node.js / REST API
+  en: Backend Engineer | Python / Node.js / REST API
 summary_id: backend
 skill_category_order: [programming-languages, backend-engineering, databases, devops-ci-cd, cloud-platforms, monitoring-reliability, automation, data-engineering]
-project_ids: [quant-trading-platform, commerce-competitive-intelligence, manufacturing-intelligence]
+project_ids: [quant-trading-platform, commerce-competitive-intelligence]
 achievement_ids: []
-experience_bullets: {}
-section_order: [summary, skills, experience, projects, achievements, education]
+experience_bullets:
+  wits-senior-software-engineer: [wits-wiwynn-assignment, wiwynn-api-batching, wiwynn-kafka-ingestion, wiwynn-inspection-automation, wiwynn-etl-operations]
+  ensense-cloud-engineer: [ensense-django-api, ensense-forwarder-refactoring, ensense-time-boundary-fix, ensense-data-replay, ensense-ec2-delivery]
+  sinica-research-assistant: []
+  ntu-research-assistant: [ntu-gis-automation]
+section_order: [summary, experience, skills, projects, achievements, education]
 sections: { experience: true, education: true, skills: true, projects: true, achievements: true }
 allowed_verification_statuses: [verified, user_provided]
