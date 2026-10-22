@@ -6,7 +6,23 @@ summary_id: data-engineering
 skill_category_order: [data-engineering, programming-languages, databases, cloud-platforms, data-analytics, devops-ci-cd, automation, monitoring-reliability]
 project_ids: [manufacturing-intelligence, commerce-competitive-intelligence, quant-trading-platform]
 achievement_ids: []
-experience_bullets: {}
+experience_bullets:
+  wits-senior-software-engineer:
+  - wits-wiwynn-assignment
+  - wiwynn-migration
+  - wiwynn-delta-performance
+  - wiwynn-data-quality
+  - wiwynn-kafka-batch
+  ensense-cloud-engineer:
+  - ensense-forwarder-refactor
+  - ensense-replay
+  - ensense-monitoring
+  sinica-research-assistant:
+  - sinica-forecast-pipeline
+  - sinica-land-cover
+  - sinica-biomass-model
+  ntu-research-assistant:
+  - ntu-gis-automation
 section_order: [summary, skills, experience, projects, achievements, education]
 sections: { experience: true, education: true, skills: true, projects: true, achievements: true }
 allowed_verification_statuses: [verified, user_provided]
