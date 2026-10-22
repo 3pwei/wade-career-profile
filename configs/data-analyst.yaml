@@ -6,7 +6,23 @@ summary_id: data-analytics
 skill_category_order: [data-analytics, programming-languages, databases, data-engineering, automation, cloud-platforms, other-relevant-skills, devops-ci-cd]
 project_ids: [manufacturing-intelligence, commerce-competitive-intelligence, quant-trading-platform]
 achievement_ids: []
-experience_bullets: {}
+experience_bullets:
+  wits-senior-software-engineer:
+  - wits-wiwynn-assignment
+  - wiwynn-bi-troubleshooting
+  - wiwynn-data-quality
+  ensense-cloud-engineer:
+  - ensense-acceptance-analysis
+  - ensense-calibration
+  - ensense-monitoring
+  sinica-research-assistant:
+  - sinica-analysis
+  - sinica-land-cover
+  - sinica-land-use-algorithm
+  - sinica-collaboration
+  ntu-research-assistant:
+  - ntu-gis-automation
+  - ntu-swmm-analysis
 section_order: [summary, skills, projects, experience, achievements, education]
 sections: { experience: true, education: true, skills: true, projects: true, achievements: true }
 allowed_verification_statuses: [verified, user_provided]
